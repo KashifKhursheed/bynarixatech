@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --bg-primary: #f8fafc;
@@ -9,9 +11,9 @@
     --text-secondary: #475569;
     --border-color: #e2e8f0;
     --accent-blue: #2563eb;
-    --accent-cyan: #06b6d4;
+    --accent-cyan: #0284c7;
     --accent-purple: #6366f1;
-    --glow-color: rgba(37, 99, 235, 0.15);
+    --glow-color: rgba(37, 99, 235, 0.12);
   }
 
   .dark {

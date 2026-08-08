@@ -135,7 +135,7 @@ export const Portfolio: React.FC = () => {
       {/* Case Study Deep Dive Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fade-in">
-          <div className="glass-panel w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl relative space-y-6">
+          <div className="glass-panel bg-white dark:bg-slate-900 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl relative space-y-6">
             {/* Header Image banner */}
             <div className="relative h-60 bg-slate-900 rounded-t-2xl overflow-hidden">
               <img
