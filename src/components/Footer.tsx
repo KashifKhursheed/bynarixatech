@@ -33,20 +33,20 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800 relative overflow-hidden">
+    <footer className="bg-[#070A0F] text-[#94A3B8] pt-16 pb-8 border-t border-[#263241] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#263241]">
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <a href="#home" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-cyan-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00E5FF] via-[#8B5CF6] to-[#FF2BD6] flex items-center justify-center text-black font-bold shadow-lg shadow-[#00E5FF]/20">
                 <Terminal className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xl font-bold tracking-tight text-white flex items-center gap-1">
-                  Bynarixa <span className="text-cyan-400 font-extrabold">Tech</span>
+                <span className="text-xl font-bold tracking-tight text-[#F8FAFC] flex items-center gap-1">
+                  Bynarixa <span className="text-[#00E5FF] font-extrabold">Tech</span>
                 </span>
-                <span className="block text-[10px] font-mono tracking-widest uppercase text-slate-400">
+                <span className="block text-[10px] font-mono tracking-widest uppercase text-[#94A3B8]">
                   01 Software Solutions
                 </span>
               </div>
@@ -147,12 +147,12 @@ export const Footer: React.FC = () => {
                   placeholder="Enter work email..."
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl text-xs bg-slate-900 border border-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-3 py-2 rounded-xl text-xs bg-[#0D1117] border border-[#263241] text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-[#00E5FF]"
                   required
                 />
                 <button
                   type="submit"
-                  className="w-full py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs flex items-center justify-center gap-1.5 transition-all"
+                  className="w-full py-2 px-3 rounded-xl bg-[#00E5FF] hover:bg-[#00CCE5] text-black font-semibold text-xs flex items-center justify-center gap-1.5 transition-all"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Subscribe</span>
@@ -160,11 +160,11 @@ export const Footer: React.FC = () => {
               </form>
             )}
 
-            <div className="pt-2 text-xs space-y-1 text-slate-400">
-              <div className="font-bold text-white">Direct WhatsApp Support:</div>
+            <div className="pt-2 text-xs space-y-1 text-[#94A3B8]">
+              <div className="font-bold text-[#F8FAFC]">Direct WhatsApp Support:</div>
               <div
                 onClick={() => openWhatsApp('Hello Bynarixa Tech Solutions!')}
-                className="text-cyan-400 cursor-pointer hover:underline"
+                className="text-[#00E5FF] cursor-pointer hover:underline font-mono"
               >
                 {DISPLAY_PHONE}
               </div>
@@ -172,25 +172,25 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar & System Status from Professional Polish Theme */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+        {/* Bottom Bar & System Status */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#94A3B8] font-mono">
           <div className="flex items-center gap-4 text-[11px] uppercase tracking-wider">
             <span>Pakistan HQ</span>
             <span>•</span>
-            <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-cyan-400 transition-colors">
+            <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-[#00E5FF] transition-colors">
               {COMPANY_INFO.email}
             </a>
           </div>
 
           <div className="flex flex-wrap items-center gap-6 text-[11px] uppercase tracking-wider">
-            <span className="flex items-center gap-2 text-slate-400">
-              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+            <span className="flex items-center gap-2 text-[#94A3B8]">
+              <span className="w-2 h-2 bg-[#22F55B] rounded-full animate-pulse" />
               Systems Active
             </span>
             <span>© {new Date().getFullYear()} {COMPANY_INFO.name}</span>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors border border-white/10"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#0D1117] hover:bg-[#151B24] text-[#F8FAFC] transition-colors border border-[#263241]"
             >
               <span>Back to Top</span>
               <ArrowUp className="w-3.5 h-3.5" />

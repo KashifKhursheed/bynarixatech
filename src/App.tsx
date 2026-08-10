@@ -59,11 +59,11 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-slate-100 transition-colors duration-300 selection:bg-blue-500 selection:text-white relative overflow-hidden">
-        {/* Subtle Background Glow Accents from Professional Polish Theme */}
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-blue-600/15 dark:bg-blue-600/20 rounded-full blur-[140px] pointer-events-none z-0" />
-        <div className="absolute top-[40%] right-[-10%] w-[45%] h-[45%] bg-indigo-600/15 dark:bg-indigo-600/20 rounded-full blur-[140px] pointer-events-none z-0" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-blue-500/10 dark:bg-cyan-600/15 rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#070A0F] text-[#0F172A] dark:text-[#F8FAFC] transition-colors duration-300 selection:bg-[#00E5FF] selection:text-black relative overflow-hidden">
+        {/* Subtle Background Glow Accents from Brand Palette */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-[#0097A7]/10 dark:bg-[#00E5FF]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+        <div className="absolute top-[40%] right-[-10%] w-[45%] h-[45%] bg-[#6D28D9]/10 dark:bg-[#8B5CF6]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#DB2777]/10 dark:bg-[#FF2BD6]/10 rounded-full blur-[140px] pointer-events-none z-0" />
 
         {/* Navigation */}
         <Navbar activeSection={activeSection} />

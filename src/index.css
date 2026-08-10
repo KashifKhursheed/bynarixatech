@@ -4,29 +4,35 @@
 
 @layer base {
   :root {
-    --bg-primary: #f8fafc;
-    --bg-surface: #ffffff;
-    --bg-card: #ffffff;
-    --text-primary: #020617;
+    /* Light Theme — Clean / Premium */
+    --bg-primary: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #F1F5F9;
+    --text-primary: #0F172A;
     --text-secondary: #475569;
-    --border-color: #e2e8f0;
-    --accent-blue: #2563eb;
-    --accent-cyan: #0284c7;
-    --accent-purple: #6366f1;
-    --glow-color: rgba(37, 99, 235, 0.12);
+    --border-color: #E2E8F0;
+    --primary-brand: #0097A7;
+    --secondary-brand: #6D28D9;
+    --accent-brand: #DB2777;
+    --success-color: #16A34A;
+    --glow-color: rgba(0, 151, 167, 0.15);
   }
 
   .dark {
-    --bg-primary: #020617;
-    --bg-surface: #090d1f;
-    --bg-card: #0f172a;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --accent-blue: #3b82f6;
-    --accent-cyan: #38bdf8;
-    --accent-purple: #818cf8;
-    --glow-color: rgba(59, 130, 246, 0.25);
+    /* Dark Theme — Neon / Futuristic */
+    --bg-primary: #070A0F;
+    --bg-surface: #0D1117;
+    --bg-card: #0D1117;
+    --bg-elevated: #151B24;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --border-color: #263241;
+    --primary-brand: #00E5FF;
+    --secondary-brand: #8B5CF6;
+    --accent-brand: #FF2BD6;
+    --success-color: #22F55B;
+    --glow-color: rgba(0, 229, 255, 0.25);
   }
 
   html {
@@ -53,51 +59,68 @@
   background: rgba(148, 163, 184, 0.3);
   border-radius: 4px;
 }
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(38, 50, 65, 0.8);
+}
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(59, 130, 246, 0.6);
+  background: #0097A7;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
 }
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid #E2E8F0;
 }
 
 .dark .glass-panel {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(13, 17, 23, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #263241;
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(248, 250, 252, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .dark .glass-nav {
-  background: rgba(2, 6, 23, 0.75);
+  background: rgba(7, 10, 15, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid #263241;
 }
 
-/* Glowing text and borders */
+/* Brand Core Gradient Text */
 .text-gradient {
-  background: linear-gradient(135deg, #2563eb 0%, #0284c7 40%, #4f46e5 100%);
+  background: linear-gradient(135deg, #0097A7 0%, #6D28D9 50%, #DB2777 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .dark .text-gradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #c084fc 100%);
+  background: linear-gradient(135deg, #00E5FF 0%, #8B5CF6 50%, #FF2BD6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Glowing border effect */
+/* Brand Core Gradient Backgrounds */
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #0097A7, #6D28D9, #DB2777);
+}
+
+.dark .bg-gradient-brand {
+  background: linear-gradient(135deg, #00E5FF, #8B5CF6, #FF2BD6);
+}
+
+/* Glowing card effect */
 .glow-card {
   position: relative;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -119,8 +142,8 @@
 .dark .bg-grid-pattern {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(38, 50, 65, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(38, 50, 65, 0.3) 1px, transparent 1px);
 }
 
 /* Keyframes for pulse / float */
@@ -141,3 +164,4 @@
 .animate-pulse-glow {
   animation: pulseGlow 4s ease-in-out infinite;
 }
+

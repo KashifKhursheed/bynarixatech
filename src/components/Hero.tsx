@@ -115,22 +115,22 @@ export const Hero: React.FC = () => {
           {/* Left Column: Hero Text & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-mono font-semibold uppercase tracking-widest shadow-sm">
-              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0097A7]/10 dark:bg-[#00E5FF]/10 border border-[#0097A7]/20 dark:border-[#00E5FF]/20 text-[#0097A7] dark:text-[#00E5FF] text-xs font-mono font-semibold uppercase tracking-widest shadow-sm">
+              <span className="w-2 h-2 bg-[#0097A7] dark:bg-[#00E5FF] rounded-full animate-pulse" />
               <span>Innovation Hub • Intelligent Software</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-[#F8FAFC] leading-[1.12]">
               Engineering the{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6]">
                 Future
               </span>{' '}
               with Intelligent Software.
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-[#475569] dark:text-[#94A3B8] max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
               We build next-generation mobile apps, web ecosystems, and enterprise software designed to scale your business into the digital frontier.
             </p>
 
@@ -142,7 +142,7 @@ export const Hero: React.FC = () => {
                     'Hello Bynarixa Tech Solutions! I would like to get a free project quote.'
                   )
                 }
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#0097A7] hover:bg-[#008392] dark:bg-[#00E5FF] dark:hover:bg-[#00CCE5] text-white dark:text-black font-bold text-sm sm:text-base shadow-lg shadow-[#0097A7]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
               >
                 <span>Get a Free Quote</span>
                 <ArrowRight className="w-5 h-5" />
@@ -150,30 +150,30 @@ export const Hero: React.FC = () => {
 
               <a
                 href="#portfolio"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/80 dark:bg-white/5 text-slate-900 dark:text-slate-100 hover:text-blue-600 dark:hover:text-cyan-400 font-bold text-sm sm:text-base border border-slate-200 dark:border-white/10 transition-all hover:bg-slate-100 dark:hover:bg-white/10"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white dark:bg-[#0D1117] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#0097A7] dark:hover:text-[#00E5FF] font-bold text-sm sm:text-base border border-[#E2E8F0] dark:border-[#263241] transition-all hover:bg-[#F1F5F9] dark:hover:bg-[#151B24]"
               >
-                <Play className="w-4 h-4 fill-current text-blue-600 dark:text-cyan-400" />
+                <Play className="w-4 h-4 fill-current text-[#0097A7] dark:text-[#00E5FF]" />
                 <span>View Case Studies</span>
               </a>
             </div>
 
             {/* Metrics Stats Section */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200/80 dark:border-white/10">
-              <div className="bg-white/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-slate-900 dark:text-white font-mono">500+</div>
-                <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-semibold mt-0.5">Projects</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-[#E2E8F0] dark:border-[#263241]">
+              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
+                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">500+</div>
+                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Projects</div>
               </div>
-              <div className="bg-white/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-slate-900 dark:text-white font-mono">98%</div>
-                <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-semibold mt-0.5">Retention</div>
+              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
+                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">98%</div>
+                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Retention</div>
               </div>
-              <div className="bg-white/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-slate-900 dark:text-white font-mono">25+</div>
-                <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-semibold mt-0.5">Countries</div>
+              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
+                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">25+</div>
+                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Countries</div>
               </div>
-              <div className="bg-white/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-slate-900 dark:text-white font-mono">12+</div>
-                <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-semibold mt-0.5">Experience</div>
+              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
+                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">12+</div>
+                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Experience</div>
               </div>
             </div>
           </div>
