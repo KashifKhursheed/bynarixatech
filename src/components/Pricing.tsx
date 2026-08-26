@@ -11,36 +11,36 @@ export const Pricing: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] text-[#7C3AED] dark:text-[#A855F7] text-xs font-mono font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-semibold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-cyan-500" />
             <span>Transparent Investment Plans</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#11111A] dark:text-[#F8F7FF] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Clear, Milestone-Based <span className="text-gradient">Pricing</span>.
           </h2>
-          <p className="text-base sm:text-lg text-[#5F6070] dark:text-[#A9A7B8] font-medium">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
             No hidden fees. Full source code ownership. SLA-backed quality assurance for startups and global brands.
           </p>
 
           {/* Billing Toggle */}
           <div className="pt-4 flex items-center justify-center gap-3">
-            <span className={`text-xs sm:text-sm font-bold ${!isAnnual ? 'text-[#11111A] dark:text-[#F8F7FF]' : 'text-[#5F6070] dark:text-[#A9A7B8]'}`}>
+            <span className={`text-xs sm:text-sm font-medium ${!isAnnual ? 'text-blue-600 dark:text-cyan-400 font-bold' : 'text-slate-500'}`}>
               Monthly Sprints
             </span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className="w-14 h-8 rounded-full bg-[#E5E1F5] dark:bg-[#28243A] p-1 transition-colors relative border border-[#E5E1F5] dark:border-[#28243A] cursor-pointer"
+              className="w-14 h-8 rounded-full bg-slate-200 dark:bg-slate-800 p-1 transition-colors relative"
               aria-label="Toggle Billing Frequency"
             >
               <div
-                className={`w-6 h-6 rounded-full bg-[#7C3AED] transition-transform ${
+                className={`w-6 h-6 rounded-full bg-blue-600 transition-transform ${
                   isAnnual ? 'translate-x-6' : 'translate-x-0'
                 }`}
               />
             </button>
-            <span className={`text-xs sm:text-sm font-bold flex items-center gap-1.5 ${isAnnual ? 'text-[#7C3AED] dark:text-[#A855F7]' : 'text-[#5F6070] dark:text-[#A9A7B8]'}`}>
+            <span className={`text-xs sm:text-sm font-medium flex items-center gap-1.5 ${isAnnual ? 'text-blue-600 dark:text-cyan-400 font-bold' : 'text-slate-500'}`}>
               Annual Contract
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-[#F1EEFF] dark:bg-[#171525] text-[#7C3AED] dark:text-[#A855F7] font-black border border-[#E5E1F5] dark:border-[#28243A]">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold">
                 SAVE 20%
               </span>
             </span>
@@ -56,36 +56,36 @@ export const Pricing: React.FC = () => {
                 key={plan.id}
                 className={`glass-panel rounded-3xl p-8 border flex flex-col justify-between relative transition-all ${
                   plan.popular
-                    ? 'border-[#7C3AED] ring-2 ring-[#7C3AED]/30 shadow-2xl shadow-[#7C3AED]/15 scale-105 z-10'
-                    : 'border-[#E5E1F5] dark:border-[#28243A] shadow-lg hover:shadow-xl'
+                    ? 'border-blue-500 ring-2 ring-blue-500/30 dark:ring-cyan-400/30 shadow-2xl scale-105 z-10'
+                    : 'border-slate-200/80 dark:border-slate-800/80 shadow-lg hover:shadow-xl'
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#A855F7] text-white text-[11px] font-black uppercase tracking-wider shadow-md shadow-[#7C3AED]/25">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[11px] font-bold uppercase tracking-wider shadow-md">
                     Most Popular Choice
                   </div>
                 )}
 
                 <div>
                   <div className="mb-6">
-                    <span className="text-xs font-mono uppercase text-[#7C3AED] dark:text-[#A855F7] font-bold">
+                    <span className="text-xs font-mono uppercase text-blue-600 dark:text-cyan-400 font-bold">
                       {plan.recommendedFor}
                     </span>
-                    <h3 className="text-2xl font-bold text-[#11111A] dark:text-[#F8F7FF] mt-1">
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-1">
                       {plan.name}
                     </h3>
-                    <p className="text-xs text-[#5F6070] dark:text-[#A9A7B8] mt-2 min-h-[36px] font-medium">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 min-h-[36px]">
                       {plan.tagline}
                     </p>
                   </div>
 
                   {/* Price */}
-                  <div className="mb-6 pb-6 border-b border-[#E5E1F5] dark:border-[#28243A]">
+                  <div className="mb-6 pb-6 border-b border-slate-200 dark:border-slate-800">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-4xl sm:text-5xl font-extrabold text-[#11111A] dark:text-[#F8F7FF] font-mono">
+                      <span className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white font-mono">
                         ${price.toLocaleString()}
                       </span>
-                      <span className="text-xs text-[#5F6070] dark:text-[#A9A7B8] font-mono font-bold">
+                      <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
                         / month
                       </span>
                     </div>
@@ -93,12 +93,12 @@ export const Pricing: React.FC = () => {
 
                   {/* Features */}
                   <div className="space-y-3 mb-8">
-                    <span className="text-xs font-bold font-mono text-[#5F6070] dark:text-[#A9A7B8] uppercase tracking-wider block">
+                    <span className="text-xs font-bold font-mono text-slate-400 uppercase tracking-wider block">
                       Included Package Features:
                     </span>
                     {plan.features.map((feat, i) => (
-                      <div key={i} className="flex items-start gap-2.5 text-xs text-[#11111A] dark:text-[#F8F7FF] font-medium">
-                        <Check className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7] shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-200">
+                        <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -112,14 +112,14 @@ export const Pricing: React.FC = () => {
                       `Hello Bynarixa Tech Solutions! I am interested in the ${plan.name} plan ($${price}/mo) from your AI pricing guide. Let's discuss requirements.`
                     )
                   }
-                  className={`w-full relative overflow-hidden group py-3.5 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] cursor-pointer ${
+                  className={`w-full relative overflow-hidden group py-3.5 px-6 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#06B6D4] text-white shadow-purple-500/25 hover:shadow-xl'
-                      : 'bg-[#F1EEFF] dark:bg-[#171525] hover:bg-[#E5E1F5] dark:hover:bg-[#28243A] text-[#11111A] dark:text-[#F8F7FF] border border-[#E5E1F5] dark:border-[#28243A]'
+                      ? 'bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl'
+                      : 'bg-slate-900 hover:bg-slate-800 dark:bg-[#151B24] dark:hover:bg-[#1A2330] text-white border border-slate-700/50 hover:border-[#25D366] dark:hover:border-[#00E5FF]'
                   }`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-shimmer-sweep pointer-events-none" />
-                  <MessageSquare className={`w-4 h-4 ${plan.popular ? 'text-white' : 'text-[#7C3AED] dark:text-[#A855F7]'}`} />
+                  <MessageSquare className="w-4 h-4 text-[#25D366] dark:text-[#00E5FF]" />
                   <span>Choose {plan.name} via WhatsApp</span>
                 </button>
               </div>

@@ -24,26 +24,26 @@ export const Testimonials: React.FC = () => {
   const current = TESTIMONIALS_DATA[currentIndex];
 
   return (
-    <section className="py-20 relative bg-[#F1EEFF]/30 dark:bg-[#09090F]/60 border-y border-[#E5E1F5] dark:border-[#28243A] overflow-hidden">
+    <section className="py-20 relative bg-slate-50/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] text-[#7C3AED] dark:text-[#A855F7] text-xs font-mono font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-semibold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-cyan-500" />
             <span>Trusted Worldwide</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#11111A] dark:text-[#F8F7FF] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             What Our <span className="text-gradient">Clients Say</span>.
           </h2>
-          <p className="text-base sm:text-lg text-[#5F6070] dark:text-[#A9A7B8] font-medium">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
             Read real feedback from CTOs, product managers, and founders who built their flagship software with Bynarixa Tech Solutions.
           </p>
         </div>
 
         {/* Carousel Container */}
         <div className="max-w-4xl mx-auto relative">
-          <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-[#E5E1F5] dark:border-[#28243A] shadow-2xl relative space-y-6 animate-fade-in bg-white dark:bg-[#11111A]">
-            <Quote className="w-12 h-12 text-[#7C3AED]/15 dark:text-[#A855F7]/15 absolute top-6 right-6" />
+          <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-200/80 dark:border-slate-800/80 shadow-2xl relative space-y-6 animate-fade-in">
+            <Quote className="w-12 h-12 text-blue-500/20 dark:text-cyan-400/20 absolute top-6 right-6" />
 
             {/* Stars */}
             <div className="flex items-center gap-1">
@@ -53,29 +53,29 @@ export const Testimonials: React.FC = () => {
             </div>
 
             {/* Content */}
-            <p className="text-base sm:text-xl text-[#11111A] dark:text-[#F8F7FF] font-medium leading-relaxed italic">
+            <p className="text-base sm:text-xl text-slate-800 dark:text-slate-200 font-medium leading-relaxed italic">
               "{current.content}"
             </p>
 
             {/* Author details */}
-            <div className="pt-6 border-t border-[#E5E1F5] dark:border-[#28243A] flex items-center justify-between">
+            <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <img
                   src={current.avatar}
                   alt={current.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-[#7C3AED] shadow-md"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-blue-500 shadow-md"
                 />
                 <div>
-                  <h3 className="text-base font-bold text-[#11111A] dark:text-[#F8F7FF]">
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white">
                     {current.name}
                   </h3>
-                  <p className="text-xs text-[#5F6070] dark:text-[#A9A7B8] font-bold">
-                    {current.role} • <span className="text-[#7C3AED] dark:text-[#A855F7] font-black">{current.company}</span>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    {current.role} • <span className="text-blue-600 dark:text-cyan-400">{current.company}</span>
                   </p>
                 </div>
               </div>
 
-              <span className="hidden sm:inline-block text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#F1EEFF] dark:bg-[#171525] text-[#7C3AED] dark:text-[#A855F7] border border-[#E5E1F5] dark:border-[#28243A]">
+              <span className="hidden sm:inline-block text-xs font-mono px-3 py-1 rounded-full bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-cyan-300">
                 Project: {current.project}
               </span>
             </div>
@@ -86,7 +86,7 @@ export const Testimonials: React.FC = () => {
             <button
               onClick={handlePrev}
               aria-label="Previous Testimonial"
-              className="p-3 rounded-full bg-white dark:bg-[#171525] text-[#11111A] dark:text-[#F8F7FF] hover:text-[#7C3AED] dark:hover:text-[#A855F7] shadow-md border border-[#E5E1F5] dark:border-[#28243A] transition-all hover:scale-105 cursor-pointer"
+              className="p-3 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 shadow-md border border-slate-200 dark:border-slate-700 transition-all hover:scale-105"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -97,10 +97,10 @@ export const Testimonials: React.FC = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
                     currentIndex === idx
-                      ? 'bg-[#7C3AED] w-8'
-                      : 'bg-[#E5E1F5] dark:bg-[#28243A] hover:bg-[#7C3AED]/50'
+                      ? 'bg-blue-600 w-8'
+                      : 'bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
@@ -110,7 +110,7 @@ export const Testimonials: React.FC = () => {
             <button
               onClick={handleNext}
               aria-label="Next Testimonial"
-              className="p-3 rounded-full bg-white dark:bg-[#171525] text-[#11111A] dark:text-[#F8F7FF] hover:text-[#7C3AED] dark:hover:text-[#A855F7] shadow-md border border-[#E5E1F5] dark:border-[#28243A] transition-all hover:scale-105 cursor-pointer"
+              className="p-3 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 shadow-md border border-slate-200 dark:border-slate-700 transition-all hover:scale-105"
             >
               <ChevronRight className="w-5 h-5" />
             </button>

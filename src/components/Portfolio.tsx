@@ -28,14 +28,14 @@ export const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] text-[#7C3AED] dark:text-[#A855F7] text-xs font-mono font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-semibold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-cyan-500" />
             <span>Showcase of Engineering Mastery</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#11111A] dark:text-[#F8F7FF] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Featured <span className="text-gradient">Case Studies</span>.
           </h2>
-          <p className="text-base sm:text-lg text-[#5F6070] dark:text-[#A9A7B8] font-medium">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
             Explore how Bynarixa Tech Solutions engineered high-performance web platforms, mobile apps, and SaaS platforms for global enterprises.
           </p>
         </div>
@@ -46,10 +46,10 @@ export const Portfolio: React.FC = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
                 activeCategory === cat
-                  ? 'bg-[#7C3AED] text-white shadow-md shadow-[#7C3AED]/25 border border-[#7C3AED]'
-                  : 'bg-white dark:bg-[#11111A] text-[#11111A] dark:text-[#A9A7B8] hover:bg-[#F1EEFF] dark:hover:bg-[#171525] hover:text-[#7C3AED] dark:hover:text-[#A855F7] border border-[#E5E1F5] dark:border-[#28243A]'
+                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
               }`}
             >
               {cat}
@@ -62,20 +62,20 @@ export const Portfolio: React.FC = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="glass-panel rounded-2xl border border-[#E5E1F5] dark:border-[#28243A] overflow-hidden shadow-lg hover:shadow-2xl glow-card group transition-all flex flex-col justify-between"
+              className="glass-panel rounded-2xl border border-slate-200/80 dark:border-slate-800/80 overflow-hidden shadow-lg hover:shadow-2xl glow-card group transition-all flex flex-col justify-between"
             >
               <div>
                 {/* Image & Overlay */}
-                <div className="relative h-52 overflow-hidden bg-[#09090F]">
+                <div className="relative h-52 overflow-hidden bg-slate-900">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#09090F] via-[#09090F]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-[#7C3AED]/90 backdrop-blur-md text-white shadow-xs">
+                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-blue-600/90 backdrop-blur-md text-white">
                       {project.category}
                     </span>
                   </div>
@@ -83,13 +83,13 @@ export const Portfolio: React.FC = () => {
 
                 {/* Content */}
                 <div className="p-6 space-y-3">
-                  <span className="text-xs font-mono text-[#7C3AED] dark:text-[#A855F7] font-bold">
+                  <span className="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-medium">
                     Client: {project.client}
                   </span>
-                  <h3 className="text-lg font-bold text-[#11111A] dark:text-[#F8F7FF] group-hover:text-[#7C3AED] dark:group-hover:text-[#A855F7] transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5F6070] dark:text-[#A9A7B8] leading-relaxed line-clamp-2 font-medium">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                     {project.shortDesc}
                   </p>
 
@@ -98,7 +98,7 @@ export const Portfolio: React.FC = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] px-2.5 py-0.5 rounded-md bg-[#F1EEFF] dark:bg-[#171525] text-[#11111A] dark:text-[#A9A7B8] font-mono font-bold border border-[#E5E1F5] dark:border-[#28243A]"
+                        className="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-mono"
                       >
                         {tag}
                       </span>
@@ -111,7 +111,7 @@ export const Portfolio: React.FC = () => {
               <div className="p-6 pt-0 flex items-center gap-3">
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="flex-1 py-2.5 px-4 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs shadow-md transition-all text-center cursor-pointer shadow-[#7C3AED]/20"
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs shadow-md shadow-blue-500/20 transition-all text-center"
                 >
                   Read Case Study
                 </button>
@@ -121,10 +121,10 @@ export const Portfolio: React.FC = () => {
                       `Hello Bynarixa Tech Solutions! I saw the case study for ${project.title} and want to discuss something similar.`
                     )
                   }
-                  className="p-2.5 rounded-xl bg-[#F1EEFF] dark:bg-[#171525] text-[#11111A] dark:text-[#F8F7FF] hover:bg-[#E5E1F5] dark:hover:bg-[#28243A] transition-colors border border-[#E5E1F5] dark:border-[#28243A] cursor-pointer"
+                  className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
                   aria-label="Discuss project on WhatsApp"
                 >
-                  <ExternalLink className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7]" />
+                  <ExternalLink className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -134,45 +134,45 @@ export const Portfolio: React.FC = () => {
 
       {/* Case Study Deep Dive Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#09090F]/70 backdrop-blur-sm animate-fade-in">
-          <div className="glass-panel bg-white dark:bg-[#11111A] w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-[#E5E1F5] dark:border-[#28243A] shadow-2xl relative space-y-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fade-in">
+          <div className="glass-panel bg-white dark:bg-slate-900 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl relative space-y-6">
             {/* Header Image banner */}
-            <div className="relative h-60 bg-[#09090F] rounded-t-2xl overflow-hidden">
+            <div className="relative h-60 bg-slate-900 rounded-t-2xl overflow-hidden">
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#09090F] via-[#09090F]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
 
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 p-2 rounded-xl bg-[#09090F]/80 text-white hover:bg-[#09090F] transition-colors cursor-pointer"
+                className="absolute top-4 right-4 p-2 rounded-xl bg-slate-900/80 text-white hover:bg-slate-800 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
 
               <div className="absolute bottom-6 left-6 right-6">
-                <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#7C3AED] text-white">
+                <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-blue-600 text-white">
                   {selectedProject.category}
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
                   {selectedProject.title}
                 </h3>
-                <p className="text-xs font-mono text-[#06B6D4]">Client: {selectedProject.client}</p>
+                <p className="text-xs font-mono text-cyan-300">Client: {selectedProject.client}</p>
               </div>
             </div>
 
             {/* Modal Body */}
             <div className="p-6 sm:p-8 space-y-6">
               {/* Metrics Header */}
-              <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A]">
+              <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-blue-50/50 dark:bg-slate-800/60 border border-blue-100 dark:border-slate-700/60">
                 {selectedProject.metrics.map((m, i) => (
                   <div key={i} className="text-center">
-                    <div className="text-xl sm:text-2xl font-extrabold text-[#7C3AED] dark:text-[#A855F7] font-mono">
+                    <div className="text-xl sm:text-2xl font-extrabold text-blue-600 dark:text-cyan-400 font-mono">
                       {m.value}
                     </div>
-                    <div className="text-[11px] text-[#5F6070] dark:text-[#A9A7B8] font-bold">
+                    <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
                       {m.label}
                     </div>
                   </div>
@@ -182,21 +182,21 @@ export const Portfolio: React.FC = () => {
               {/* Challenge vs Solution */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <h4 className="text-sm font-bold text-[#11111A] dark:text-[#F8F7FF] uppercase tracking-wider flex items-center gap-2">
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-rose-500" />
                     The Challenge
                   </h4>
-                  <p className="text-xs sm:text-sm text-[#5F6070] dark:text-[#A9A7B8] leading-relaxed font-medium">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     {selectedProject.fullChallenge}
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-bold text-[#11111A] dark:text-[#F8F7FF] uppercase tracking-wider flex items-center gap-2">
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500" />
                     The Engineering Solution
                   </h4>
-                  <p className="text-xs sm:text-sm text-[#5F6070] dark:text-[#A9A7B8] leading-relaxed font-medium">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     {selectedProject.solution}
                   </p>
                 </div>
@@ -204,14 +204,14 @@ export const Portfolio: React.FC = () => {
 
               {/* Measured Impact */}
               <div>
-                <h4 className="text-sm font-bold text-[#11111A] dark:text-[#F8F7FF] uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7]" />
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-cyan-500" />
                   Key Business Impact & Results
                 </h4>
                 <div className="space-y-2">
                   {selectedProject.impact.map((imp, idx) => (
-                    <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#11111A] dark:text-[#F8F7FF] font-bold">
-                      <CheckCircle2 className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7] shrink-0" />
+                    <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>{imp}</span>
                     </div>
                   ))}
@@ -219,11 +219,11 @@ export const Portfolio: React.FC = () => {
               </div>
 
               {/* Tags */}
-              <div className="pt-4 border-t border-[#E5E1F5] dark:border-[#28243A] flex flex-wrap gap-2">
+              <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-2">
                 {selectedProject.tags.map((t) => (
                   <span
                     key={t}
-                    className="px-3 py-1 rounded-lg text-xs font-mono bg-[#F1EEFF] dark:bg-[#171525] text-[#7C3AED] dark:text-[#A855F7] font-bold border border-[#E5E1F5] dark:border-[#28243A]"
+                    className="px-3 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
                   >
                     {t}
                   </span>
@@ -232,7 +232,7 @@ export const Portfolio: React.FC = () => {
 
               {/* Action Buttons */}
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <span className="text-xs text-[#5F6070] dark:text-[#A9A7B8] font-bold">
+                <span className="text-xs text-slate-500 dark:text-slate-400">
                   Want to build a platform like this for your business?
                 </span>
                 <button
@@ -242,10 +242,9 @@ export const Portfolio: React.FC = () => {
                     );
                     setSelectedProject(null);
                   }}
-                  className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#06B6D4] text-white font-bold text-sm shadow-lg shadow-purple-500/25 hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-sm shadow-md"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
-                  <MessageSquare className="w-4 h-4 text-white" />
+                  <MessageSquare className="w-4 h-4" />
                   <span>Discuss Case Study on WhatsApp</span>
                 </button>
               </div>

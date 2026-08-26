@@ -29,11 +29,11 @@ export const ScrollProgressBar: React.FC = () => {
       aria-valuemin={0}
       aria-valuemax={100}
       role="progressbar"
-      className="fixed top-0 left-0 right-0 z-[100] h-[3.5px] pointer-events-none bg-[#E5E1F5]/80 dark:bg-[#171525]/80 backdrop-blur-xs overflow-visible"
+      className="fixed top-0 left-0 right-0 z-[100] h-[3.5px] pointer-events-none bg-slate-200/50 dark:bg-[#151B24]/80 backdrop-blur-xs overflow-visible"
     >
       {/* Animated Gradient Fill Bar */}
       <div
-        className="h-full relative transition-[width] duration-150 ease-out bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#06B6D4] shadow-[0_0_12px_rgba(124,58,237,0.4)] dark:shadow-[0_0_14px_rgba(168,85,247,0.6)]"
+        className="h-full relative transition-[width] duration-150 ease-out bg-gradient-to-r from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] shadow-[0_0_12px_rgba(0,151,167,0.4)] dark:shadow-[0_0_14px_rgba(0,229,255,0.6)]"
         style={{ width: `${scrollProgress}%` }}
       >
         {/* Animated continuous shimmer light beam */}
@@ -43,9 +43,9 @@ export const ScrollProgressBar: React.FC = () => {
         {isVisible && scrollProgress > 0 && (
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 flex items-center justify-center">
             {/* Outer pulse glow */}
-            <span className="absolute w-3.5 h-3.5 rounded-full bg-[#7C3AED] dark:bg-[#A855F7] opacity-75 animate-ping" />
+            <span className="absolute w-3.5 h-3.5 rounded-full bg-[#0097A7] dark:bg-[#00E5FF] opacity-75 animate-ping" />
             {/* Solid glowing center dot */}
-            <span className="relative w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white dark:bg-[#A855F7] shadow-[0_0_8px_#7C3AED,0_0_16px_#06B6D4] dark:shadow-[0_0_10px_#A855F7,0_0_20px_#06B6D4]" />
+            <span className="relative w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white dark:bg-[#00E5FF] shadow-[0_0_8px_#0097A7,0_0_16px_#DB2777] dark:shadow-[0_0_10px_#00E5FF,0_0_20px_#FF2BD6]" />
           </div>
         )}
       </div>

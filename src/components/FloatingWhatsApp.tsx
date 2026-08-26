@@ -62,30 +62,30 @@ export const FloatingWhatsApp: React.FC = () => {
     <aside aria-label="WhatsApp AI Chatbot Assistant" className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pointer-events-none">
       {/* Interactive AI WhatsApp Chatbot Popover Window */}
       {popoverOpen && (
-        <div className="pointer-events-auto mb-3 w-[calc(100vw-2.5rem)] sm:w-96 max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-[#7C3AED]/40 dark:border-[#7C3AED]/50 bg-white dark:bg-[#11111A] animate-fade-in backdrop-blur-xl transition-all">
+        <div className="pointer-events-auto mb-3 w-[calc(100vw-2.5rem)] sm:w-96 max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-[#25D366]/40 dark:border-[#00E5FF]/40 bg-white dark:bg-[#0D1117] animate-fade-in backdrop-blur-xl transition-all">
           {/* Top Header with Vibrant Gradient & Live Status */}
-          <div className="relative p-4 sm:p-5 bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#06B6D4] text-white">
+          <div className="relative p-4 sm:p-5 bg-gradient-to-r from-[#0F5132] via-[#0D9488] to-[#0097A7] dark:from-[#082F24] dark:via-[#0E4A40] dark:to-[#093542] text-white">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-11 h-11 rounded-2xl bg-white/20 p-0.5 shadow-lg flex items-center justify-center backdrop-blur-sm">
-                    <div className="w-full h-full rounded-[14px] bg-[#09090F] flex items-center justify-center text-[#A855F7]">
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#25D366] to-[#00E5FF] p-0.5 shadow-lg flex items-center justify-center">
+                    <div className="w-full h-full rounded-[14px] bg-[#070A0F] flex items-center justify-center text-[#25D366] dark:text-[#00E5FF]">
                       <Bot className="w-6 h-6 animate-bot-wiggle" />
                     </div>
                   </div>
                   {/* Live Pulsing Beacon Dot */}
-                  <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-[#06B6D4] border-2 border-[#09090F] shadow-[0_0_8px_#06B6D4]" />
+                  <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-[#22F55B] border-2 border-[#070A0F] shadow-[0_0_8px_#22F55B]" />
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
                     <span className="text-sm font-extrabold tracking-tight text-white flex items-center gap-1.5">
-                      <Bot className="w-4 h-4 text-[#06B6D4]" />
+                      <Bot className="w-4 h-4 text-[#25D366]" />
                       Bynarixa AI Consultant
                     </span>
                     <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                   </div>
-                  <div className="text-[11px] font-mono text-purple-100 font-medium flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#06B6D4] animate-ping" />
+                  <div className="text-[11px] font-mono text-emerald-200 dark:text-cyan-200 font-medium flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#22F55B] animate-ping" />
                     <span>Active 24/7 • Instant Dispatch</span>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export const FloatingWhatsApp: React.FC = () => {
               <button
                 onClick={() => setPopoverOpen(false)}
                 aria-label="Close AI Chatbot"
-                className="p-1.5 rounded-xl bg-black/20 hover:bg-black/40 text-white/80 hover:text-white transition-colors cursor-pointer"
+                className="p-1.5 rounded-xl bg-black/20 hover:bg-black/40 text-white/80 hover:text-white transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -103,9 +103,9 @@ export const FloatingWhatsApp: React.FC = () => {
             {/* Direct Number Badge */}
             <div className="mt-3 flex items-center justify-between px-3 py-1.5 rounded-xl bg-black/30 backdrop-blur-sm text-[11px] font-mono text-white/90">
               <span className="flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#06B6D4]" /> Official WhatsApp
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#25D366]" /> Official WhatsApp
               </span>
-              <span className="font-bold text-[#F8F7FF]">{DISPLAY_PHONE}</span>
+              <span className="font-bold text-[#00E5FF]">{DISPLAY_PHONE}</span>
             </div>
           </div>
 
@@ -113,27 +113,27 @@ export const FloatingWhatsApp: React.FC = () => {
           <div className="p-4 sm:p-5 space-y-4 max-h-[380px] overflow-y-auto">
             {/* Bot Message Bubble */}
             <div className="flex items-start gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#7C3AED] to-[#A855F7] text-white flex items-center justify-center shrink-0 shadow-sm border border-[#7C3AED]/30">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shrink-0 shadow-sm border border-[#25D366]/30">
                 <Bot className="w-4 h-4 animate-bot-wiggle" />
               </div>
-              <div className="p-3.5 rounded-2xl rounded-tl-none bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] text-xs text-[#11111A] dark:text-[#F8F7FF] leading-relaxed shadow-sm">
-                <p className="font-semibold">
-                  👋 Welcome to <strong className="text-[#7C3AED] dark:text-[#A855F7]">Bynarixa Tech</strong>! Select a quick prompt or type your project idea below to chat directly with our engineering team on WhatsApp.
+              <div className="p-3.5 rounded-2xl rounded-tl-none bg-slate-100 dark:bg-[#151B24] border border-slate-200/80 dark:border-[#263241] text-xs text-slate-800 dark:text-slate-200 leading-relaxed shadow-sm">
+                <p className="font-medium">
+                  👋 Welcome to <strong className="text-[#0097A7] dark:text-[#00E5FF]">Bynarixa Tech</strong>! Select a quick prompt or type your project idea below to chat directly with our engineering team on WhatsApp.
                 </p>
                 {/* Simulated live typing indicator */}
-                <div className="flex items-center gap-1 mt-2 text-[#7C3AED] dark:text-[#A855F7]">
+                <div className="flex items-center gap-1 mt-2 text-[#0097A7] dark:text-[#00E5FF]">
                   <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing-1" />
                   <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing-2" />
                   <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing-3" />
-                  <span className="text-[10px] font-mono font-bold ml-1">AI Assistant Ready</span>
+                  <span className="text-[10px] font-mono font-semibold ml-1">AI Assistant Ready</span>
                 </div>
               </div>
             </div>
 
             {/* Quick AI Prompt Buttons */}
             <div className="space-y-1.5">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#5F6070] dark:text-[#A9A7B8] flex items-center gap-1">
-                <Sparkles className="w-3 h-3 text-[#A855F7]" />
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-1">
+                <Sparkles className="w-3 h-3 text-amber-500" />
                 Quick Project Templates:
               </span>
               <div className="grid grid-cols-1 gap-1.5">
@@ -144,17 +144,17 @@ export const FloatingWhatsApp: React.FC = () => {
                       key={idx}
                       type="button"
                       onClick={() => handleSelectPrompt(p)}
-                      className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between border cursor-pointer ${
+                      className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-all flex items-center justify-between border ${
                         isSelected
-                          ? 'bg-[#F1EEFF] dark:bg-[#171525] border-[#7C3AED] text-[#7C3AED] dark:text-[#A855F7] shadow-sm'
-                          : 'bg-white dark:bg-[#171525] border-[#E5E1F5] dark:border-[#28243A] text-[#11111A] dark:text-[#F8F7FF] hover:border-[#7C3AED] hover:bg-[#F1EEFF]/60 dark:hover:bg-[#171525]'
+                          ? 'bg-[#25D366]/15 dark:bg-[#00E5FF]/15 border-[#25D366] dark:border-[#00E5FF] text-[#0F5132] dark:text-[#00E5FF] font-bold shadow-sm'
+                          : 'bg-slate-50 dark:bg-[#151B24] border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-[#25D366] dark:hover:border-[#00E5FF] hover:bg-slate-100 dark:hover:bg-[#1A2330]'
                       }`}
                     >
                       <div className="flex items-center gap-2 truncate">
                         {p.icon}
                         <span className="truncate">{p.label}</span>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 opacity-60 shrink-0 ml-1 text-[#7C3AED] dark:text-[#A855F7]" />
+                      <ArrowRight className="w-3.5 h-3.5 opacity-60 shrink-0 ml-1" />
                     </button>
                   );
                 })}
@@ -162,25 +162,25 @@ export const FloatingWhatsApp: React.FC = () => {
             </div>
 
             {/* Input & Form Dispatch */}
-            <form onSubmit={handleSend} className="space-y-2.5 pt-1 border-t border-[#E5E1F5] dark:border-[#28243A]">
+            <form onSubmit={handleSend} className="space-y-2.5 pt-1 border-t border-slate-200 dark:border-slate-800">
               <div className="relative">
                 <input
                   type="text"
                   placeholder="Ask a question or describe your project..."
                   value={quickMessage}
                   onChange={(e) => setQuickMessage(e.target.value)}
-                  className="w-full pl-3.5 pr-10 py-2.5 rounded-xl text-xs bg-white dark:bg-[#171525] text-[#11111A] dark:text-[#F8F7FF] border border-[#E5E1F5] dark:border-[#28243A] focus:outline-none focus:ring-2 focus:ring-[#7C3AED] transition-all font-medium placeholder:text-[#5F6070]/60 dark:placeholder:text-[#A9A7B8]/60"
+                  className="w-full pl-3.5 pr-10 py-2.5 rounded-xl text-xs bg-slate-50 dark:bg-[#151B24] text-slate-900 dark:text-white border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-[#25D366] dark:focus:ring-[#00E5FF] transition-all shadow-inner"
                 />
-                <MessageSquare className="w-4 h-4 text-[#5F6070] dark:text-[#A9A7B8] absolute right-3 top-3 pointer-events-none" />
+                <MessageSquare className="w-4 h-4 text-slate-400 absolute right-3 top-3 pointer-events-none" />
               </div>
 
-              {/* High-Contrast Action Button */}
+              {/* High-Contrast Animated WhatsApp Action Button */}
               <button
                 type="submit"
-                className="w-full relative overflow-hidden group py-3 px-4 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#06B6D4] hover:from-[#6D28D9] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-purple-500/25 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                className="w-full relative overflow-hidden group py-3 px-4 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#00E5FF] hover:from-[#20bd5a] hover:to-[#00cce5] text-slate-950 font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/30 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
                 {/* Continuous Shimmer Light Beam */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer-sweep pointer-events-none" />
                 
                 <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 <span>Launch WhatsApp AI Chat</span>
@@ -196,32 +196,32 @@ export const FloatingWhatsApp: React.FC = () => {
         {!popoverOpen && (
           <button
             onClick={() => setPopoverOpen(true)}
-            className="hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-white dark:bg-[#11111A] border border-[#7C3AED]/40 dark:border-[#7C3AED]/50 shadow-xl shadow-purple-500/10 hover:shadow-2xl transition-all duration-300 hover:scale-105 group cursor-pointer"
+            className="hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-white dark:bg-[#0D1117] border border-[#25D366]/60 dark:border-[#00E5FF]/60 shadow-xl shadow-slate-900/10 hover:shadow-2xl transition-all duration-300 hover:scale-105 group cursor-pointer"
           >
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-[#7C3AED] to-[#A855F7] text-white flex items-center justify-center shadow-xs">
+            <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shadow-xs">
               <Bot className="w-3.5 h-3.5 animate-bot-wiggle" />
             </div>
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#06B6D4] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#06B6D4]" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22F55B] opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#25D366]" />
             </span>
-            <span className="text-xs font-bold text-[#11111A] dark:text-[#F8F7FF] flex items-center gap-1">
-              AI Chatbot <span className="text-[#7C3AED] dark:text-[#A855F7] font-extrabold">• Online</span>
+            <span className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1">
+              AI Chatbot <span className="text-[#059669] dark:text-[#00E5FF] font-extrabold">• Online</span>
             </span>
-            <Sparkles className="w-3.5 h-3.5 text-[#A855F7] group-hover:rotate-12 transition-transform" />
+            <Sparkles className="w-3.5 h-3.5 text-amber-500 group-hover:rotate-12 transition-transform" />
           </button>
         )}
 
         {/* Floating Circular Trigger Button */}
         <div className="relative group">
           {/* Animated Pulsing Wave Rings */}
-          <div className="absolute inset-0 rounded-full bg-[#7C3AED] opacity-50 animate-pulse-ring pointer-events-none" />
-          <div className="absolute inset-0 rounded-full bg-[#06B6D4] opacity-30 animate-pulse-ring-delayed pointer-events-none" />
+          <div className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-pulse-ring pointer-events-none" />
+          <div className="absolute inset-0 rounded-full bg-[#00E5FF] opacity-40 animate-pulse-ring-delayed pointer-events-none" />
 
           <button
             onClick={() => setPopoverOpen(!popoverOpen)}
             aria-label="Open AI WhatsApp Chatbot Assistant"
-            className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#7C3AED] via-[#A855F7] to-[#06B6D4] text-white flex items-center justify-center shadow-[0_10px_25px_rgba(124,58,237,0.4)] dark:shadow-[0_10px_30px_rgba(168,85,247,0.45)] hover:shadow-[0_15px_35px_rgba(124,58,237,0.6)] hover:scale-110 active:scale-95 transition-all duration-300 border-2 border-white dark:border-[#09090F] cursor-pointer"
+            className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#128C7E] via-[#25D366] to-[#00E5FF] text-white flex items-center justify-center shadow-[0_10px_25px_rgba(37,211,102,0.4)] dark:shadow-[0_10px_30px_rgba(0,229,255,0.45)] hover:shadow-[0_15px_35px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all duration-300 border-2 border-white dark:border-[#070A0F] cursor-pointer"
           >
             {popoverOpen ? (
               <X className="w-7 h-7 text-white drop-shadow-md" />
@@ -229,7 +229,7 @@ export const FloatingWhatsApp: React.FC = () => {
               <div className="relative flex items-center justify-center">
                 {/* Custom Combined AI Robot + WhatsApp Chat Icon */}
                 <Bot className="w-7 h-7 sm:w-8 sm:h-8 text-white drop-shadow-md animate-bot-wiggle" />
-                <div className="absolute -bottom-1 -right-1.5 w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-full bg-[#09090F] text-[#06B6D4] flex items-center justify-center border border-white/80 dark:border-[#28243A] shadow-sm">
+                <div className="absolute -bottom-1 -right-1.5 w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-full bg-[#070A0F] text-[#25D366] flex items-center justify-center border border-white/80 dark:border-[#070A0F] shadow-sm">
                   <MessageCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current" />
                 </div>
                 <Sparkles className="w-3 h-3 absolute -top-1.5 -left-1 text-amber-300 animate-pulse" />
@@ -238,7 +238,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
             {/* Notification Count Badge */}
             {!popoverOpen && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#A855F7] text-white text-[10px] font-black rounded-full flex items-center justify-center border-2 border-white dark:border-[#09090F] shadow-md animate-bounce">
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF2BD6] text-white text-[10px] font-black rounded-full flex items-center justify-center border-2 border-white dark:border-[#070A0F] shadow-md animate-bounce">
                 1
               </span>
             )}

@@ -63,11 +63,11 @@ export default function App() {
   return (
     <ThemeProvider>
       <PWAProvider>
-        <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#090D16] text-slate-900 dark:text-slate-100 transition-colors duration-300 selection:bg-[#7C3AED] selection:text-white relative overflow-hidden">
-          {/* Subtle Background Glow Accents from Electric Purple / Cyan Palette */}
-          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-[#7C3AED]/10 dark:bg-[#7C3AED]/15 rounded-full blur-[140px] pointer-events-none z-0" />
-          <div className="absolute top-[40%] right-[-10%] w-[45%] h-[45%] bg-[#06B6D4]/10 dark:bg-[#06B6D4]/12 rounded-full blur-[140px] pointer-events-none z-0" />
-          <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#A855F7]/10 dark:bg-[#A855F7]/12 rounded-full blur-[140px] pointer-events-none z-0" />
+        <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#070A0F] text-[#0F172A] dark:text-[#F8FAFC] transition-colors duration-300 selection:bg-[#00E5FF] selection:text-black relative overflow-hidden">
+          {/* Subtle Background Glow Accents from Brand Palette */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-[#0097A7]/10 dark:bg-[#00E5FF]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+          <div className="absolute top-[40%] right-[-10%] w-[45%] h-[45%] bg-[#6D28D9]/10 dark:bg-[#8B5CF6]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+          <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#DB2777]/10 dark:bg-[#FF2BD6]/10 rounded-full blur-[140px] pointer-events-none z-0" />
 
           {/* Top Animated Scroll Depth Progress Bar */}
           <ScrollProgressBar />
