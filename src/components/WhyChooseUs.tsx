@@ -69,14 +69,14 @@ export const WhyChooseUs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-semibold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-black dark:text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
             <span>The Bynarixa Advantage</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             Why Leading Businesses <span className="text-gradient">Choose Us</span>.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+          <p className="text-base sm:text-lg text-black dark:text-slate-300 font-medium">
             We don't just write code—we partner with you to engineer scalable digital products that deliver measurable revenue growth.
           </p>
         </div>
@@ -95,10 +95,10 @@ export const WhyChooseUs: React.FC = () => {
                 >
                   <IconComp className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-lg font-bold text-black dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
                   {adv.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-black dark:text-slate-300 leading-relaxed font-medium">
                   {adv.desc}
                 </p>
               </div>

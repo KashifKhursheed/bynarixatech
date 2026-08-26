@@ -116,13 +116,13 @@ export const Hero: React.FC = () => {
           {/* Left Column: Hero Text & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0097A7]/10 dark:bg-[#00E5FF]/10 border border-[#0097A7]/20 dark:border-[#00E5FF]/20 text-[#0097A7] dark:text-[#00E5FF] text-xs font-mono font-semibold uppercase tracking-widest shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0097A7]/10 dark:bg-[#00E5FF]/10 border border-[#0097A7]/20 dark:border-[#00E5FF]/20 text-black dark:text-[#00E5FF] text-xs font-mono font-bold uppercase tracking-widest shadow-sm">
               <span className="w-2 h-2 bg-[#0097A7] dark:bg-[#00E5FF] rounded-full animate-pulse" />
               <span>Innovation Hub • Intelligent Software</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-[#F8FAFC] leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-black dark:text-[#F8FAFC] leading-[1.12]">
               Engineering the{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6]">
                 Future
@@ -131,7 +131,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-[#475569] dark:text-[#94A3B8] max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-black dark:text-[#94A3B8] max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
               We build next-generation mobile apps, web ecosystems, and enterprise software designed to scale your business into the digital frontier.
             </p>
 
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
 
               <a
                 href="#portfolio"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white dark:bg-[#0D1117] text-slate-900 dark:text-[#F8FAFC] hover:text-[#00838F] dark:hover:text-[#00E5FF] font-black text-sm sm:text-base border-2 border-slate-300 dark:border-[#263241] transition-all hover:bg-slate-50 dark:hover:bg-[#151B24] shadow-sm hover:shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white dark:bg-[#0D1117] text-black dark:text-[#F8FAFC] hover:text-[#00838F] dark:hover:text-[#00E5FF] font-black text-sm sm:text-base border-2 border-slate-300 dark:border-[#263241] transition-all hover:bg-slate-50 dark:hover:bg-[#151B24] shadow-sm hover:shadow-md"
               >
                 <Play className="w-4 h-4 fill-current text-[#00838F] dark:text-[#00E5FF]" />
                 <span>View Case Studies</span>
@@ -163,20 +163,20 @@ export const Hero: React.FC = () => {
             {/* Metrics Stats Section */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200 dark:border-[#263241]">
               <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
-                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">500+</div>
-                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Projects</div>
+                <div className="text-2xl font-black text-black dark:text-[#F8FAFC] font-mono">500+</div>
+                <div className="text-[10px] text-black dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Projects</div>
               </div>
               <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
-                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">98%</div>
-                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Retention</div>
+                <div className="text-2xl font-black text-black dark:text-[#F8FAFC] font-mono">98%</div>
+                <div className="text-[10px] text-black dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Retention</div>
               </div>
               <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
-                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">25+</div>
-                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Countries</div>
+                <div className="text-2xl font-black text-black dark:text-[#F8FAFC] font-mono">25+</div>
+                <div className="text-[10px] text-black dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Countries</div>
               </div>
               <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
-                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">12+</div>
-                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Experience</div>
+                <div className="text-2xl font-black text-black dark:text-[#F8FAFC] font-mono">12+</div>
+                <div className="text-[10px] text-black dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Experience</div>
               </div>
             </div>
           </div>
@@ -197,11 +197,11 @@ export const Hero: React.FC = () => {
                   <div className="w-3 h-3 rounded-full bg-rose-500" />
                   <div className="w-3 h-3 rounded-full bg-amber-500" />
                   <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="ml-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+                  <span className="ml-2 text-xs font-mono text-black dark:text-slate-400 font-bold">
                     bynarixa-core-v2.6.ts
                   </span>
                 </div>
-                <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-cyan-300 font-semibold">
+                <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-100 dark:bg-blue-900/60 text-black dark:text-cyan-300 font-bold">
                   LIVE COMPILING
                 </span>
               </div>
@@ -231,10 +231,10 @@ export const Hero: React.FC = () => {
                     <Smartphone className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-semibold text-slate-800 dark:text-slate-100">
+                    <div className="text-xs font-bold text-black dark:text-slate-100">
                       Mobile & Web
                     </div>
-                    <div className="text-[10px] text-slate-500 dark:text-slate-400">
+                    <div className="text-[10px] text-black dark:text-slate-400 font-medium">
                       Flutter, React, iOS
                     </div>
                   </div>
@@ -245,10 +245,10 @@ export const Hero: React.FC = () => {
                     <Cpu className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-semibold text-slate-800 dark:text-slate-100">
+                    <div className="text-xs font-bold text-black dark:text-slate-100">
                       AI & Cloud
                     </div>
-                    <div className="text-[10px] text-slate-500 dark:text-slate-400">
+                    <div className="text-[10px] text-black dark:text-slate-400 font-medium">
                       Gemini API, AWS
                     </div>
                   </div>
@@ -258,7 +258,7 @@ export const Hero: React.FC = () => {
               {/* Floating Badge */}
               <div className="absolute -bottom-5 -right-4 px-4 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full bg-emerald-500 animate-ping" />
-                <span className="text-xs font-bold text-slate-800 dark:text-slate-100">
+                <span className="text-xs font-bold text-black dark:text-slate-100">
                   Direct Line: {DISPLAY_PHONE}
                 </span>
               </div>

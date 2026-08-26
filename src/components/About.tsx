@@ -74,14 +74,14 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-semibold uppercase tracking-wider">
-            <Award className="w-4 h-4 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-black dark:text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider">
+            <Award className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
             <span>About Bynarixa Tech Solutions</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             Engineering Software with <span className="text-gradient">Precision & Soul</span>.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+          <p className="text-base sm:text-lg text-black dark:text-slate-300 font-medium">
             Founded with a vision to build software that stands the test of time, Bynarixa Tech Solutions combines world-class engineering discipline with human-centered product design.
           </p>
         </div>
@@ -89,46 +89,46 @@ export const About: React.FC = () => {
         {/* Animated Counter Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-16">
           <div className="glass-panel p-6 rounded-2xl text-center border border-slate-200/80 dark:border-slate-800/80 shadow-md hover:border-blue-500/50 transition-all">
-            <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-cyan-400 font-mono mb-1">
+            <div className="text-3xl sm:text-4xl font-extrabold text-black dark:text-cyan-400 font-mono mb-1">
               {counts.projects}+
             </div>
-            <div className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400">
+            <div className="text-xs sm:text-sm font-bold text-black dark:text-slate-400">
               Projects Completed
             </div>
           </div>
 
           <div className="glass-panel p-6 rounded-2xl text-center border border-slate-200/80 dark:border-slate-800/80 shadow-md hover:border-blue-500/50 transition-all">
-            <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-cyan-400 font-mono mb-1">
+            <div className="text-3xl sm:text-4xl font-extrabold text-black dark:text-cyan-400 font-mono mb-1">
               {counts.clients}+
             </div>
-            <div className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400">
+            <div className="text-xs sm:text-sm font-bold text-black dark:text-slate-400">
               Happy Global Clients
             </div>
           </div>
 
           <div className="glass-panel p-6 rounded-2xl text-center border border-slate-200/80 dark:border-slate-800/80 shadow-md hover:border-blue-500/50 transition-all">
-            <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-cyan-400 font-mono mb-1">
+            <div className="text-3xl sm:text-4xl font-extrabold text-black dark:text-cyan-400 font-mono mb-1">
               {counts.countries}+
             </div>
-            <div className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400">
+            <div className="text-xs sm:text-sm font-bold text-black dark:text-slate-400">
               Countries Served
             </div>
           </div>
 
           <div className="glass-panel p-6 rounded-2xl text-center border border-slate-200/80 dark:border-slate-800/80 shadow-md hover:border-blue-500/50 transition-all">
-            <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-cyan-400 font-mono mb-1">
+            <div className="text-3xl sm:text-4xl font-extrabold text-black dark:text-cyan-400 font-mono mb-1">
               {counts.years}+
             </div>
-            <div className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400">
+            <div className="text-xs sm:text-sm font-bold text-black dark:text-slate-400">
               Years Experience
             </div>
           </div>
 
           <div className="col-span-2 lg:col-span-1 glass-panel p-6 rounded-2xl text-center border border-slate-200/80 dark:border-slate-800/80 shadow-md hover:border-blue-500/50 transition-all">
-            <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-cyan-400 font-mono mb-1">
+            <div className="text-3xl sm:text-4xl font-extrabold text-black dark:text-cyan-400 font-mono mb-1">
               {counts.team}+
             </div>
-            <div className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400">
+            <div className="text-xs sm:text-sm font-bold text-black dark:text-slate-400">
               Expert Engineers
             </div>
           </div>
@@ -140,8 +140,8 @@ export const About: React.FC = () => {
             <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-cyan-400 flex items-center justify-center">
               <Target className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Our Mission</h3>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            <h3 className="text-2xl font-bold text-black dark:text-white">Our Mission</h3>
+            <p className="text-black dark:text-slate-300 text-sm sm:text-base leading-relaxed font-medium">
               To empower visionaries, startups, and enterprises worldwide by transforming complex ideas into intuitive, robust, and scalable software platforms that drive real business growth.
             </p>
           </div>
@@ -150,8 +150,8 @@ export const About: React.FC = () => {
             <div className="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-900/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center">
               <Eye className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Our Vision</h3>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            <h3 className="text-2xl font-bold text-black dark:text-white">Our Vision</h3>
+            <p className="text-black dark:text-slate-300 text-sm sm:text-base leading-relaxed font-medium">
               To be recognized globally as the gold standard in bespoke software development—renowned for software reliability, cutting-edge AI integrations, and uncompromised client satisfaction.
             </p>
           </div>
@@ -160,10 +160,10 @@ export const About: React.FC = () => {
         {/* Core Values */}
         <div className="space-y-8">
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+            <h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
               Core Principles & Engineering Standards
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">
+            <p className="text-black dark:text-slate-400 text-sm mt-2 font-medium">
               Every system we construct is anchored in four uncompromising core principles.
             </p>
           </div>
@@ -179,8 +179,8 @@ export const About: React.FC = () => {
                   <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-cyan-400 flex items-center justify-center mb-4">
                     <IconComp className="w-5 h-5" />
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{val.title}</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <h4 className="text-lg font-bold text-black dark:text-white mb-2">{val.title}</h4>
+                  <p className="text-xs sm:text-sm text-black dark:text-slate-400 leading-relaxed font-medium">
                     {val.description}
                   </p>
                 </div>
@@ -193,14 +193,14 @@ export const About: React.FC = () => {
         <div className="mt-16 glass-panel p-8 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 text-xs font-mono">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950 text-black dark:text-cyan-300 text-xs font-mono font-bold">
                 <Workflow className="w-3.5 h-3.5" />
                 <span>AGILE SOFTWARE DEVELOPMENT</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
                 How We Guarantee Quality Assurance
               </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-sm text-black dark:text-slate-300 leading-relaxed font-medium">
                 We bridge rigorous engineering practices with flexible Agile execution. Our clients enjoy predictability, full code ownership, and continuous integration.
               </p>
             </div>
@@ -211,11 +211,11 @@ export const About: React.FC = () => {
                   key={idx}
                   className="p-4 rounded-xl bg-white/70 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 space-y-1.5"
                 >
-                  <div className="flex items-center gap-2 text-blue-600 dark:text-cyan-400 font-bold text-sm">
-                    <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <div className="flex items-center gap-2 text-black dark:text-cyan-400 font-bold text-sm">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
                     <span>{m.name}</span>
                   </div>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">{m.desc}</p>
+                  <p className="text-xs text-black dark:text-slate-400 font-medium">{m.desc}</p>
                 </div>
               ))}
             </div>

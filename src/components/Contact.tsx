@@ -84,14 +84,14 @@ export const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-semibold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-black dark:text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
             <span>Get In Touch With Engineers</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             Let's Engineer Your <span className="text-gradient">Next Product</span>.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+          <p className="text-base sm:text-lg text-black dark:text-slate-300 font-medium">
             Have a project in mind or need an architecture review? Reach out directly to our engineering team or send us a WhatsApp message.
           </p>
         </div>
@@ -100,7 +100,7 @@ export const Contact: React.FC = () => {
           {/* Left Column: Official Contact Info */}
           <div className="lg:col-span-5 space-y-6">
             <div className="glass-panel p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl space-y-6">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white pb-4 border-b border-slate-200 dark:border-slate-800">
+              <h3 className="text-2xl font-bold text-black dark:text-white pb-4 border-b border-slate-200 dark:border-slate-800">
                 Official Company Contact
               </h3>
 
@@ -113,14 +113,14 @@ export const Contact: React.FC = () => {
                   <Phone className="w-6 h-6 animate-bot-wiggle" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-mono uppercase text-[#0F5132] dark:text-emerald-400 font-bold flex items-center gap-1.5">
+                  <div className="text-[11px] font-mono uppercase text-black dark:text-emerald-400 font-bold flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping" />
                     <span>WhatsApp AI & Engineering Direct</span>
                   </div>
-                  <div className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-cyan-400">
+                  <div className="text-lg font-bold text-black dark:text-white group-hover:text-emerald-700 dark:group-hover:text-cyan-400">
                     {LOCAL_PHONE} ({DISPLAY_PHONE})
                   </div>
-                  <div className="text-xs text-[#059669] dark:text-[#00E5FF] font-semibold mt-0.5 flex items-center gap-1">
+                  <div className="text-xs text-black dark:text-[#00E5FF] font-bold mt-0.5 flex items-center gap-1">
                     <span>Tap to Chat on WhatsApp (Active 24/7)</span>
                     <span className="group-hover:translate-x-1 transition-transform">→</span>
                   </div>
@@ -136,13 +136,13 @@ export const Contact: React.FC = () => {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono uppercase text-slate-500 dark:text-slate-400 font-bold">
+                  <div className="text-xs font-mono uppercase text-black dark:text-slate-400 font-bold">
                     Official Email
                   </div>
-                  <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400">
+                  <div className="text-base font-bold text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400">
                     {COMPANY_INFO.email}
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">Response within 2 hours</div>
+                  <div className="text-xs text-black dark:text-slate-400 font-medium mt-0.5">Response within 2 hours</div>
                 </div>
               </a>
 
@@ -152,13 +152,13 @@ export const Contact: React.FC = () => {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono uppercase text-slate-500 dark:text-slate-400 font-bold">
+                  <div className="text-xs font-mono uppercase text-black dark:text-slate-400 font-bold">
                     Headquarters Location
                   </div>
-                  <div className="text-base font-bold text-slate-900 dark:text-white">
+                  <div className="text-base font-bold text-black dark:text-white">
                     {COMPANY_INFO.location}
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">{COMPANY_INFO.address}</div>
+                  <div className="text-xs text-black dark:text-slate-400 font-medium mt-0.5">{COMPANY_INFO.address}</div>
                 </div>
               </div>
 
@@ -168,13 +168,13 @@ export const Contact: React.FC = () => {
                   <Clock className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono uppercase text-slate-500 dark:text-slate-400 font-bold">
+                  <div className="text-xs font-mono uppercase text-black dark:text-slate-400 font-bold">
                     Business Working Hours
                   </div>
-                  <div className="text-base font-bold text-slate-900 dark:text-white">
+                  <div className="text-base font-bold text-black dark:text-white">
                     {COMPANY_INFO.businessHours}
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">24/7 SLA Server Emergency Support</div>
+                  <div className="text-xs text-black dark:text-slate-400 font-medium mt-0.5">24/7 SLA Server Emergency Support</div>
                 </div>
               </div>
             </div>
@@ -185,22 +185,22 @@ export const Contact: React.FC = () => {
             <div className="glass-panel p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800/80 shadow-xl space-y-6">
               <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                  <h3 className="text-2xl font-bold text-black dark:text-white">
                     Start Your Project Consultation
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  <p className="text-xs text-black dark:text-slate-400 mt-1 font-medium">
                     Fill out the form below for an NDA, quote estimate, and sprint roadmap.
                   </p>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="px-3 py-1 rounded-full text-xs font-mono bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-cyan-300 font-bold">
+                  <span className="px-3 py-1 rounded-full text-xs font-mono bg-blue-100 dark:bg-blue-900/60 text-black dark:text-cyan-300 font-bold">
                     NDA Included
                   </span>
                 </div>
               </div>
 
               {errorMsg && (
-                <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-xs flex items-center gap-2">
+                <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-300 text-xs flex items-center gap-2 font-bold">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>{errorMsg}</span>
                 </div>
@@ -211,10 +211,10 @@ export const Contact: React.FC = () => {
                   <div className="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-lg">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="text-2xl font-bold text-emerald-950 dark:text-emerald-100">
+                  <h4 className="text-2xl font-bold text-black dark:text-emerald-100">
                     Project Request Submitted!
                   </h4>
-                  <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 max-w-md mx-auto">
+                  <p className="text-xs sm:text-sm text-black dark:text-emerald-300 max-w-md mx-auto font-medium">
                     Thank you {formData.fullName}. Our lead solutions architect is reviewing your requirements and will reach out within 2 hours.
                   </p>
                   <button
@@ -234,8 +234,8 @@ export const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Full Name */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                        <User className="w-3.5 h-3.5 text-blue-500" />
+                      <label className="text-xs font-bold text-black dark:text-slate-300 flex items-center gap-1.5">
+                        <User className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         Full Name *
                       </label>
                       <input
@@ -244,14 +244,14 @@ export const Contact: React.FC = () => {
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="e.g. Sarah Jenkins"
-                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-black dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium placeholder:text-slate-500"
                       />
                     </div>
 
                     {/* Company */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                        <Building2 className="w-3.5 h-3.5 text-blue-500" />
+                      <label className="text-xs font-bold text-black dark:text-slate-300 flex items-center gap-1.5">
+                        <Building2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         Company / Organization
                       </label>
                       <input
@@ -260,7 +260,7 @@ export const Contact: React.FC = () => {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="e.g. Acme Health Corp"
-                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-black dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium placeholder:text-slate-500"
                       />
                     </div>
                   </div>
@@ -268,8 +268,8 @@ export const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Email */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                        <Mail className="w-3.5 h-3.5 text-blue-500" />
+                      <label className="text-xs font-bold text-black dark:text-slate-300 flex items-center gap-1.5">
+                        <Mail className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         Work Email Address *
                       </label>
                       <input
@@ -278,14 +278,14 @@ export const Contact: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="s.jenkins@acmehealth.com"
-                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-black dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium placeholder:text-slate-500"
                       />
                     </div>
 
                     {/* Phone / WhatsApp */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                        <Phone className="w-3.5 h-3.5 text-blue-500" />
+                      <label className="text-xs font-bold text-black dark:text-slate-300 flex items-center gap-1.5">
+                        <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         Phone / WhatsApp Number *
                       </label>
                       <input
@@ -294,7 +294,7 @@ export const Contact: React.FC = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="e.g. +1 555 019 2831"
-                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-black dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium placeholder:text-slate-500"
                       />
                     </div>
                   </div>
@@ -302,15 +302,15 @@ export const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Service Required */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                        <FileText className="w-3.5 h-3.5 text-blue-500" />
+                      <label className="text-xs font-bold text-black dark:text-slate-300 flex items-center gap-1.5">
+                        <FileText className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         Service Category
                       </label>
                       <select
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-black dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
                       >
                         <option value="Android App Development">Android App Development</option>
                         <option value="iOS App Development">iOS App Development</option>
@@ -327,15 +327,15 @@ export const Contact: React.FC = () => {
 
                     {/* Budget */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                        <DollarSign className="w-3.5 h-3.5 text-blue-500" />
+                      <label className="text-xs font-bold text-black dark:text-slate-300 flex items-center gap-1.5">
+                        <DollarSign className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         Estimated Budget
                       </label>
                       <select
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-black dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
                       >
                         <option value="< $3,000">&lt; $3,000 (MVP Sprint)</option>
                         <option value="$3,000 - $7,000">$3,000 - $7,000 (Standard)</option>
@@ -347,7 +347,7 @@ export const Contact: React.FC = () => {
 
                   {/* Message */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <label className="text-xs font-bold text-black dark:text-slate-300">
                       Project Requirements & Goals *
                     </label>
                     <textarea
@@ -356,7 +356,7 @@ export const Contact: React.FC = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Describe your app concept, target users, desired features, or key integrations..."
-                      className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-black dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium placeholder:text-slate-500"
                     />
                   </div>
 

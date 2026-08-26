@@ -4,19 +4,19 @@
 
 @layer base {
   :root {
-    /* Light Theme — Clean / Premium */
+    /* Light Theme — Clean / High-Contrast Pure Black Text */
     --bg-primary: #F8FAFC;
     --bg-surface: #FFFFFF;
     --bg-card: #FFFFFF;
     --bg-elevated: #F1F5F9;
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
-    --border-color: #E2E8F0;
-    --primary-brand: #0097A7;
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --border-color: #CBD5E1;
+    --primary-brand: #00838F;
     --secondary-brand: #6D28D9;
     --accent-brand: #DB2777;
     --success-color: #16A34A;
-    --glow-color: rgba(0, 151, 167, 0.15);
+    --glow-color: rgba(0, 131, 143, 0.15);
   }
 
   .dark {

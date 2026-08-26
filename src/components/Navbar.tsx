@@ -81,10 +81,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 <Terminal className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <span className="text-lg sm:text-xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC] flex items-center gap-1">
-                  Bynarixa <span className="text-[#0097A7] dark:text-[#00E5FF] font-extrabold">Tech</span>
+                <span className="text-lg sm:text-xl font-bold tracking-tight text-black dark:text-[#F8FAFC] flex items-center gap-1">
+                  Bynarixa <span className="text-[#00838F] dark:text-[#00E5FF] font-extrabold">Tech</span>
                 </span>
-                <span className="block text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-[#475569] dark:text-[#94A3B8]">
+                <span className="block text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-black dark:text-[#94A3B8] font-bold">
                   Software Solutions
                 </span>
               </div>
@@ -99,15 +99,15 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     key={link.name}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`px-3 py-1.5 text-xs xl:text-sm font-medium rounded-lg transition-all relative ${
+                    className={`px-3 py-1.5 text-xs xl:text-sm rounded-lg transition-all relative ${
                       isActive
-                        ? 'text-[#0097A7] dark:text-[#00E5FF] font-semibold bg-[#F1F5F9] dark:bg-[#151B24]'
-                        : 'text-[#475569] dark:text-[#94A3B8] hover:text-[#0097A7] dark:hover:text-[#00E5FF] hover:bg-[#F1F5F9] dark:hover:bg-[#151B24]'
+                        ? 'text-[#00838F] dark:text-[#00E5FF] font-black bg-slate-100 dark:bg-[#151B24]'
+                        : 'text-black dark:text-[#94A3B8] font-bold hover:text-[#00838F] dark:hover:text-[#00E5FF] hover:bg-slate-100 dark:hover:bg-[#151B24]'
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#0097A7] dark:bg-[#00E5FF] rounded-full" />
+                      <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#00838F] dark:bg-[#00E5FF] rounded-full" />
                     )}
                   </a>
                 );
@@ -121,9 +121,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 <button
                   onClick={installApp}
                   aria-label="Install App"
-                  className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 shadow-md text-xs font-black transition-all hover:scale-105 active:scale-95 border border-slate-900 dark:border-transparent"
+                  className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-black hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 shadow-md text-xs font-black transition-all hover:scale-105 active:scale-95 border border-black dark:border-transparent cursor-pointer"
                 >
-                  <Download className="w-3.5 h-3.5 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
+                  <Download className="w-3.5 h-3.5 text-white dark:text-slate-950 stroke-[2.5]" />
                   <span>Install App</span>
                 </button>
               )}
@@ -177,11 +177,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           />
           <div className="fixed top-16 right-0 bottom-0 w-full max-w-xs bg-[#FFFFFF] dark:bg-[#0D1117] border-l border-[#E2E8F0] dark:border-[#263241] p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
             <div className="space-y-2">
-              <div className="pb-4 border-b border-[#E2E8F0] dark:border-[#263241] mb-4 flex items-center justify-between">
-                <span className="text-xs font-mono font-bold tracking-widest text-[#475569] dark:text-[#94A3B8] uppercase">
+              <div className="pb-4 border-b border-slate-200 dark:border-[#263241] mb-4 flex items-center justify-between">
+                <span className="text-xs font-mono font-black tracking-widest text-black dark:text-[#94A3B8] uppercase">
                   Navigation Menu
                 </span>
-                <span className="text-xs px-2 py-0.5 rounded bg-[#0097A7]/10 dark:bg-[#00E5FF]/10 text-[#0097A7] dark:text-[#00E5FF] font-mono font-semibold">
+                <span className="text-xs px-2 py-0.5 rounded bg-[#0097A7]/10 dark:bg-[#00E5FF]/10 text-black dark:text-[#00E5FF] font-mono font-bold">
                   {DISPLAY_PHONE}
                 </span>
               </div>
@@ -190,7 +190,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-[#0F172A] dark:text-[#F8FAFC] hover:bg-[#F1F5F9] dark:hover:bg-[#151B24] hover:text-[#0097A7] dark:hover:text-[#00E5FF] transition-colors"
+                  className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-bold text-black dark:text-[#F8FAFC] hover:bg-slate-100 dark:hover:bg-[#151B24] hover:text-[#00838F] dark:hover:text-[#00E5FF] transition-colors"
                 >
                   <span>{link.name}</span>
                   <ArrowRight className="w-4 h-4 opacity-40" />
@@ -205,9 +205,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     setMobileMenuOpen(false);
                     installApp();
                   }}
-                  className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-black text-xs flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 border border-slate-900 dark:border-transparent"
+                  className="w-full py-3 px-4 rounded-xl bg-black hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-black text-xs flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 border border-black dark:border-transparent cursor-pointer"
                 >
-                  <Download className="w-4 h-4 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
+                  <Download className="w-4 h-4 text-white dark:text-slate-950 stroke-[2.5]" />
                   <span>Install App to Device</span>
                 </button>
               )}

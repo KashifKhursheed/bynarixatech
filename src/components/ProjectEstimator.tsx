@@ -48,22 +48,22 @@ I'd like to confirm this quote and start my project.`;
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Options Controls */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-bold uppercase">
-                <Calculator className="w-4 h-4 text-cyan-500" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-black dark:text-cyan-300 text-xs font-mono font-bold uppercase">
+                <Calculator className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
                 <span>Instant Project Scope Estimator</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black dark:text-white tracking-tight">
                 Estimate Your <span className="text-gradient">Software Budget & Timeline</span>.
               </h2>
 
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-black dark:text-slate-300 leading-relaxed font-medium">
                 Select your parameters below for an instant preliminary estimate, then dispatch your quote directly to our engineering team on WhatsApp.
               </p>
 
               {/* 1. Project Type */}
               <div className="space-y-2">
-                <label className="text-xs font-bold font-mono text-slate-900 dark:text-slate-400 uppercase">
+                <label className="text-xs font-bold font-mono text-black dark:text-slate-400 uppercase">
                   1. Project Category
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -79,7 +79,7 @@ I'd like to confirm this quote and start my project.`;
                       className={`p-2.5 rounded-xl text-xs font-bold border transition-all text-center ${
                         projectType === item.id
                           ? 'bg-slate-900 dark:bg-[#00E5FF] border-slate-900 dark:border-transparent text-white dark:text-slate-950 shadow-md'
-                          : 'bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
+                          : 'bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 text-black dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
                       }`}
                     >
                       {item.label}
@@ -90,7 +90,7 @@ I'd like to confirm this quote and start my project.`;
 
               {/* 2. Platform */}
               <div className="space-y-2">
-                <label className="text-xs font-bold font-mono text-slate-900 dark:text-slate-400 uppercase">
+                <label className="text-xs font-bold font-mono text-black dark:text-slate-400 uppercase">
                   2. Platform Scope
                 </label>
                 <div className="grid grid-cols-3 gap-2">
@@ -105,7 +105,7 @@ I'd like to confirm this quote and start my project.`;
                       className={`p-2.5 rounded-xl text-xs font-bold border transition-all text-center ${
                         platform === item.id
                           ? 'bg-slate-900 dark:bg-[#00E5FF] border-slate-900 dark:border-transparent text-white dark:text-slate-950 shadow-md'
-                          : 'bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
+                          : 'bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 text-black dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
                       }`}
                     >
                       {item.label}
@@ -118,7 +118,7 @@ I'd like to confirm this quote and start my project.`;
               <div className="flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 shadow-xs">
                 <div className="flex items-center gap-2.5">
                   <Zap className="w-4 h-4 text-amber-500" />
-                  <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-200">
+                  <span className="text-xs sm:text-sm font-bold text-black dark:text-slate-200">
                     Include Gemini AI / LLM Integration
                   </span>
                 </div>
@@ -134,29 +134,29 @@ I'd like to confirm this quote and start my project.`;
             {/* Right Result Card */}
             <div className="lg:col-span-5 glass-panel bg-white dark:bg-[#151B24] p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-[#263241] space-y-6 text-center shadow-lg">
               <div>
-                <span className="text-xs font-mono uppercase text-[#00838F] dark:text-[#00E5FF] font-black tracking-wider">
+                <span className="text-xs font-mono uppercase text-black dark:text-[#00E5FF] font-black tracking-wider">
                   ESTIMATED INVESTMENT RANGE
                 </span>
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white font-mono my-2">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black dark:text-white font-mono my-2">
                   ${min.toLocaleString()} - ${max.toLocaleString()}
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+                <p className="text-xs text-black dark:text-slate-400 font-medium">
                   Includes full source code rights, UI/UX design, QA testing & 30-day post launch SLA support.
                 </p>
               </div>
 
-              <div className="space-y-2.5 text-left text-xs text-slate-800 dark:text-slate-300 pt-4 border-t border-slate-200 dark:border-slate-800 font-medium">
+              <div className="space-y-2.5 text-left text-xs text-black dark:text-slate-300 pt-4 border-t border-slate-200 dark:border-slate-800 font-bold">
                 <div className="flex items-center justify-between">
                   <span>Estimated Timeframe:</span>
-                  <span className="font-mono text-[#00838F] dark:text-[#00E5FF] font-bold">3 - 6 Weeks</span>
+                  <span className="font-mono text-black dark:text-[#00E5FF] font-black">3 - 6 Weeks</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>Engineering Pod:</span>
-                  <span className="font-mono text-[#00838F] dark:text-[#00E5FF] font-bold">3 Senior Engineers + QA</span>
+                  <span className="font-mono text-black dark:text-[#00E5FF] font-black">3 Senior Engineers + QA</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>IP Code Ownership:</span>
-                  <span className="font-mono text-emerald-700 dark:text-emerald-400 font-bold">100% Guaranteed</span>
+                  <span className="font-mono text-black dark:text-emerald-400 font-black">100% Guaranteed</span>
                 </div>
               </div>
 

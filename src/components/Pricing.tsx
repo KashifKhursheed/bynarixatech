@@ -11,20 +11,20 @@ export const Pricing: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-semibold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-black dark:text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
             <span>Transparent Investment Plans</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black dark:text-white tracking-tight">
             Clear, Milestone-Based <span className="text-gradient">Pricing</span>.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+          <p className="text-base sm:text-lg text-black dark:text-slate-300 font-medium">
             No hidden fees. Full source code ownership. SLA-backed quality assurance for startups and global brands.
           </p>
 
           {/* Billing Toggle */}
           <div className="pt-4 flex items-center justify-center gap-3">
-            <span className={`text-xs sm:text-sm font-bold ${!isAnnual ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-slate-400'}`}>
+            <span className={`text-xs sm:text-sm font-bold ${!isAnnual ? 'text-black dark:text-white' : 'text-black/70 dark:text-slate-400'}`}>
               Monthly Sprints
             </span>
             <button
@@ -38,9 +38,9 @@ export const Pricing: React.FC = () => {
                 }`}
               />
             </button>
-            <span className={`text-xs sm:text-sm font-bold flex items-center gap-1.5 ${isAnnual ? 'text-blue-700 dark:text-[#00E5FF]' : 'text-slate-600 dark:text-slate-400'}`}>
+            <span className={`text-xs sm:text-sm font-bold flex items-center gap-1.5 ${isAnnual ? 'text-black dark:text-[#00E5FF]' : 'text-black/70 dark:text-slate-400'}`}>
               Annual Contract
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-black">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 dark:bg-emerald-950 text-black dark:text-emerald-300 font-black">
                 SAVE 20%
               </span>
             </span>
@@ -56,25 +56,25 @@ export const Pricing: React.FC = () => {
                 key={plan.id}
                 className={`glass-panel rounded-3xl p-8 border flex flex-col justify-between relative transition-all ${
                   plan.popular
-                    ? 'border-blue-500 ring-2 ring-blue-500/30 dark:ring-cyan-400/30 shadow-2xl scale-105 z-10'
+                    ? 'border-slate-900 dark:border-cyan-400 ring-2 ring-slate-900/20 dark:ring-cyan-400/30 shadow-2xl scale-105 z-10'
                     : 'border-slate-200/80 dark:border-slate-800/80 shadow-lg hover:shadow-xl'
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[11px] font-bold uppercase tracking-wider shadow-md">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-slate-900 dark:bg-gradient-to-r dark:from-blue-600 dark:to-cyan-500 text-white text-[11px] font-black uppercase tracking-wider shadow-md">
                     Most Popular Choice
                   </div>
                 )}
 
                 <div>
                   <div className="mb-6">
-                    <span className="text-xs font-mono uppercase text-blue-600 dark:text-cyan-400 font-bold">
+                    <span className="text-xs font-mono uppercase text-black dark:text-cyan-400 font-bold">
                       {plan.recommendedFor}
                     </span>
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-1">
+                    <h3 className="text-2xl font-bold text-black dark:text-white mt-1">
                       {plan.name}
                     </h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 min-h-[36px]">
+                    <p className="text-xs text-black dark:text-slate-400 mt-2 min-h-[36px] font-medium">
                       {plan.tagline}
                     </p>
                   </div>
@@ -82,10 +82,10 @@ export const Pricing: React.FC = () => {
                   {/* Price */}
                   <div className="mb-6 pb-6 border-b border-slate-200 dark:border-slate-800">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white font-mono">
+                      <span className="text-4xl sm:text-5xl font-extrabold text-black dark:text-white font-mono">
                         ${price.toLocaleString()}
                       </span>
-                      <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
+                      <span className="text-xs text-black dark:text-slate-400 font-mono font-bold">
                         / month
                       </span>
                     </div>
@@ -93,12 +93,12 @@ export const Pricing: React.FC = () => {
 
                   {/* Features */}
                   <div className="space-y-3 mb-8">
-                    <span className="text-xs font-bold font-mono text-slate-400 uppercase tracking-wider block">
+                    <span className="text-xs font-bold font-mono text-black dark:text-slate-400 uppercase tracking-wider block">
                       Included Package Features:
                     </span>
                     {plan.features.map((feat, i) => (
-                      <div key={i} className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-200">
-                        <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-2.5 text-xs text-black dark:text-slate-200 font-medium">
+                        <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-500 shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}

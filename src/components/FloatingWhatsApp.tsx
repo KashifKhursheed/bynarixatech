@@ -116,8 +116,8 @@ export const FloatingWhatsApp: React.FC = () => {
               <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shrink-0 shadow-sm border border-[#25D366]/30">
                 <Bot className="w-4 h-4 animate-bot-wiggle" />
               </div>
-              <div className="p-3.5 rounded-2xl rounded-tl-none bg-slate-100 dark:bg-[#151B24] border border-slate-200/80 dark:border-[#263241] text-xs text-slate-800 dark:text-slate-200 leading-relaxed shadow-sm">
-                <p className="font-medium">
+              <div className="p-3.5 rounded-2xl rounded-tl-none bg-slate-100 dark:bg-[#151B24] border border-slate-200/80 dark:border-[#263241] text-xs text-black dark:text-slate-200 leading-relaxed shadow-sm">
+                <p className="font-semibold">
                   👋 Welcome to <strong className="text-[#0097A7] dark:text-[#00E5FF]">Bynarixa Tech</strong>! Select a quick prompt or type your project idea below to chat directly with our engineering team on WhatsApp.
                 </p>
                 {/* Simulated live typing indicator */}
@@ -125,14 +125,14 @@ export const FloatingWhatsApp: React.FC = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing-1" />
                   <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing-2" />
                   <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing-3" />
-                  <span className="text-[10px] font-mono font-semibold ml-1">AI Assistant Ready</span>
+                  <span className="text-[10px] font-mono font-bold ml-1">AI Assistant Ready</span>
                 </div>
               </div>
             </div>
 
             {/* Quick AI Prompt Buttons */}
             <div className="space-y-1.5">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-1">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-black dark:text-slate-500 flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-amber-500" />
                 Quick Project Templates:
               </span>
@@ -144,10 +144,10 @@ export const FloatingWhatsApp: React.FC = () => {
                       key={idx}
                       type="button"
                       onClick={() => handleSelectPrompt(p)}
-                      className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-all flex items-center justify-between border ${
+                      className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between border ${
                         isSelected
-                          ? 'bg-[#25D366]/15 dark:bg-[#00E5FF]/15 border-[#25D366] dark:border-[#00E5FF] text-[#0F5132] dark:text-[#00E5FF] font-bold shadow-sm'
-                          : 'bg-slate-50 dark:bg-[#151B24] border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-[#25D366] dark:hover:border-[#00E5FF] hover:bg-slate-100 dark:hover:bg-[#1A2330]'
+                          ? 'bg-[#25D366]/15 dark:bg-[#00E5FF]/15 border-[#25D366] dark:border-[#00E5FF] text-[#0F5132] dark:text-[#00E5FF] shadow-sm'
+                          : 'bg-slate-50 dark:bg-[#151B24] border-slate-200 dark:border-slate-800 text-black dark:text-slate-300 hover:border-[#25D366] dark:hover:border-[#00E5FF] hover:bg-slate-100 dark:hover:bg-[#1A2330]'
                       }`}
                     >
                       <div className="flex items-center gap-2 truncate">
@@ -169,7 +169,7 @@ export const FloatingWhatsApp: React.FC = () => {
                   placeholder="Ask a question or describe your project..."
                   value={quickMessage}
                   onChange={(e) => setQuickMessage(e.target.value)}
-                  className="w-full pl-3.5 pr-10 py-2.5 rounded-xl text-xs bg-slate-50 dark:bg-[#151B24] text-slate-900 dark:text-white border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-[#25D366] dark:focus:ring-[#00E5FF] transition-all shadow-inner"
+                  className="w-full pl-3.5 pr-10 py-2.5 rounded-xl text-xs bg-slate-50 dark:bg-[#151B24] text-black dark:text-white border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-[#25D366] dark:focus:ring-[#00E5FF] transition-all shadow-inner font-medium"
                 />
                 <MessageSquare className="w-4 h-4 text-slate-400 absolute right-3 top-3 pointer-events-none" />
               </div>
@@ -205,7 +205,7 @@ export const FloatingWhatsApp: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22F55B] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#25D366]" />
             </span>
-            <span className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1">
+            <span className="text-xs font-bold text-black dark:text-white flex items-center gap-1">
               AI Chatbot <span className="text-[#059669] dark:text-[#00E5FF] font-extrabold">• Online</span>
             </span>
             <Sparkles className="w-3.5 h-3.5 text-amber-500 group-hover:rotate-12 transition-transform" />
