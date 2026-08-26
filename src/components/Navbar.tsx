@@ -116,14 +116,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
             {/* Right Controls */}
             <div className="flex items-center gap-2 sm:gap-3">
-              {/* Install PWA App Button (Desktop & Tablet) */}
+              {/* Install App Button (Desktop & Tablet) */}
               {!isInstalled && (
                 <button
                   onClick={installApp}
-                  aria-label="Install App as PWA"
-                  className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 dark:bg-[#151B24] hover:bg-[#0097A7]/10 dark:hover:bg-[#00E5FF]/10 text-slate-800 dark:text-slate-200 hover:text-[#0097A7] dark:hover:text-[#00E5FF] border border-slate-200 dark:border-[#263241] text-xs font-bold transition-all hover:scale-105 active:scale-95"
+                  aria-label="Install App"
+                  className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-[#151B24] hover:bg-slate-50 dark:hover:bg-[#1C2430] text-slate-950 dark:text-white border-2 border-slate-200 dark:border-[#00E5FF]/40 shadow-sm text-xs font-extrabold transition-all hover:scale-105 active:scale-95"
                 >
-                  <Download className="w-3.5 h-3.5 text-[#0097A7] dark:text-[#00E5FF]" />
+                  <Download className="w-3.5 h-3.5 text-[#0097A7] dark:text-[#00E5FF] stroke-[2.5]" />
                   <span>Install App</span>
                 </button>
               )}
@@ -205,10 +205,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     setMobileMenuOpen(false);
                     installApp();
                   }}
-                  className="w-full py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold text-xs flex items-center justify-center gap-2 hover:bg-slate-200 dark:hover:bg-[#1A2330] transition-colors"
+                  className="w-full py-3 px-4 rounded-xl bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-[#00E5FF]/40 text-slate-950 dark:text-white font-extrabold text-xs flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-[#1C2430] transition-all shadow-sm active:scale-98"
                 >
-                  <Download className="w-4 h-4 text-[#0097A7] dark:text-[#00E5FF]" />
-                  <span>Install App to Home Screen</span>
+                  <Download className="w-4 h-4 text-[#0097A7] dark:text-[#00E5FF] stroke-[2.5]" />
+                  <span>Install App to Device</span>
                 </button>
               )}
 
