@@ -16,18 +16,18 @@ export const Blog: React.FC = () => {
       : BLOG_POSTS.filter((post) => post.category === activeCategory);
 
   return (
-    <section id="blog" className="py-20 relative bg-slate-50/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+    <section id="blog" className="py-20 relative bg-[#F1EEFF]/30 dark:bg-[#09090F]/60 border-y border-[#E5E1F5] dark:border-[#28243A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-black dark:text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider">
-            <BookOpen className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] text-[#7C3AED] dark:text-[#A855F7] text-xs font-mono font-bold uppercase tracking-wider">
+            <BookOpen className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7]" />
             <span>Tech Insights & Architecture Insights</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#11111A] dark:text-[#F8F7FF] tracking-tight">
             Latest From Our <span className="text-gradient">Engineering Blog</span>.
           </h2>
-          <p className="text-base sm:text-lg text-black dark:text-slate-300 font-medium">
+          <p className="text-base sm:text-lg text-[#5F6070] dark:text-[#A9A7B8] font-medium">
             Articles, tutorials, and technical insights authored by Bynarixa's principal architects and software specialists.
           </p>
         </div>
@@ -38,10 +38,10 @@ export const Blog: React.FC = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeCategory === cat
-                  ? 'bg-slate-900 dark:bg-[#00E5FF] text-white dark:text-slate-950 shadow-md border border-slate-900 dark:border-transparent'
-                  : 'bg-white dark:bg-slate-800 text-black dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border-2 border-slate-200 dark:border-slate-700'
+                  ? 'bg-[#7C3AED] text-white shadow-md shadow-[#7C3AED]/25 border border-[#7C3AED]'
+                  : 'bg-white dark:bg-[#11111A] text-[#11111A] dark:text-[#A9A7B8] hover:bg-[#F1EEFF] dark:hover:bg-[#171525] hover:text-[#7C3AED] dark:hover:text-[#A855F7] border border-[#E5E1F5] dark:border-[#28243A]'
               }`}
             >
               {cat}
@@ -54,10 +54,10 @@ export const Blog: React.FC = () => {
           {filteredPosts.map((post) => (
             <div
               key={post.id}
-              className="glass-panel rounded-2xl border border-slate-200/80 dark:border-slate-800/80 overflow-hidden shadow-md hover:shadow-xl glow-card group transition-all flex flex-col justify-between"
+              className="glass-panel rounded-2xl border border-[#E5E1F5] dark:border-[#28243A] overflow-hidden shadow-md hover:shadow-xl glow-card group transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="relative h-44 overflow-hidden bg-slate-900">
+                <div className="relative h-44 overflow-hidden bg-[#09090F]">
                   <img
                     src={post.image}
                     alt={post.title}
@@ -65,30 +65,30 @@ export const Blog: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-900/90 dark:bg-blue-600 text-white">
+                    <span className="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-[#7C3AED]/90 text-white backdrop-blur-md">
                       {post.category}
                     </span>
                   </div>
                 </div>
 
                 <div className="p-5 space-y-2.5">
-                  <div className="flex items-center gap-3 text-[11px] text-black dark:text-slate-400 font-mono font-bold">
+                  <div className="flex items-center gap-3 text-[11px] text-[#5F6070] dark:text-[#A9A7B8] font-mono font-bold">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3 text-cyan-600 dark:text-cyan-400" />
+                      <Calendar className="w-3 h-3 text-[#7C3AED] dark:text-[#A855F7]" />
                       {post.date}
                     </span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-cyan-600 dark:text-cyan-400" />
+                      <Clock className="w-3 h-3 text-[#7C3AED] dark:text-[#A855F7]" />
                       {post.readTime}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-black dark:text-white line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-base font-bold text-[#11111A] dark:text-[#F8F7FF] line-clamp-2 group-hover:text-[#7C3AED] dark:group-hover:text-[#A855F7] transition-colors">
                     {post.title}
                   </h3>
 
-                  <p className="text-xs text-black dark:text-slate-400 line-clamp-2 leading-relaxed font-medium">
+                  <p className="text-xs text-[#5F6070] dark:text-[#A9A7B8] line-clamp-2 leading-relaxed font-medium">
                     {post.excerpt}
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export const Blog: React.FC = () => {
               <div className="p-5 pt-0">
                 <button
                   onClick={() => setSelectedPost(post)}
-                  className="w-full inline-flex items-center justify-between py-2 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-black dark:text-slate-100 hover:bg-slate-900 hover:text-white dark:hover:bg-[#00E5FF] dark:hover:text-slate-950 transition-all text-xs font-bold border border-slate-200 dark:border-slate-700"
+                  className="w-full inline-flex items-center justify-between py-2 px-3 rounded-lg bg-[#F1EEFF] dark:bg-[#171525] text-[#11111A] dark:text-[#F8F7FF] hover:bg-[#7C3AED] hover:text-white dark:hover:bg-[#7C3AED] dark:hover:text-white transition-all text-xs font-bold border border-[#E5E1F5] dark:border-[#28243A] cursor-pointer"
                 >
                   <span>Read Full Article</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -110,21 +110,21 @@ export const Blog: React.FC = () => {
 
       {/* Blog Article Reader Modal */}
       {selectedPost && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fade-in">
-          <div className="glass-panel bg-white dark:bg-slate-900 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl relative space-y-6">
-            <div className="relative h-64 bg-slate-900 rounded-t-2xl overflow-hidden">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#09090F]/70 backdrop-blur-sm animate-fade-in">
+          <div className="glass-panel bg-white dark:bg-[#11111A] w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-[#E5E1F5] dark:border-[#28243A] shadow-2xl relative space-y-6">
+            <div className="relative h-64 bg-[#09090F] rounded-t-2xl overflow-hidden">
               <img src={selectedPost.image} alt={selectedPost.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#09090F] via-[#09090F]/30 to-transparent" />
 
               <button
                 onClick={() => setSelectedPost(null)}
-                className="absolute top-4 right-4 p-2 rounded-xl bg-slate-900/80 text-white hover:bg-slate-800 transition-colors"
+                className="absolute top-4 right-4 p-2 rounded-xl bg-[#09090F]/80 text-white hover:bg-[#09090F] transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
 
               <div className="absolute bottom-6 left-6 right-6">
-                <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900 dark:bg-blue-600 text-white">
+                <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#7C3AED] text-white">
                   {selectedPost.category}
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mt-2">
@@ -135,42 +135,42 @@ export const Blog: React.FC = () => {
 
             <div className="p-6 sm:p-8 space-y-6">
               {/* Author */}
-              <div className="flex items-center gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+              <div className="flex items-center gap-4 pb-4 border-b border-[#E5E1F5] dark:border-[#28243A]">
                 <img
                   src={selectedPost.author.avatar}
                   alt={selectedPost.author.name}
-                  className="w-10 h-10 rounded-full object-cover"
+                  className="w-10 h-10 rounded-full object-cover border border-[#7C3AED]"
                 />
                 <div>
-                  <div className="text-xs font-bold text-black dark:text-white">
+                  <div className="text-xs font-bold text-[#11111A] dark:text-[#F8F7FF]">
                     {selectedPost.author.name}
                   </div>
-                  <div className="text-[11px] text-black/80 dark:text-slate-400 font-medium">{selectedPost.author.role}</div>
+                  <div className="text-[11px] text-[#5F6070] dark:text-[#A9A7B8] font-medium">{selectedPost.author.role}</div>
                 </div>
-                <div className="ml-auto text-xs font-mono text-black dark:text-slate-400 font-bold">
+                <div className="ml-auto text-xs font-mono text-[#5F6070] dark:text-[#A9A7B8] font-bold">
                   {selectedPost.date} ({selectedPost.readTime})
                 </div>
               </div>
 
               {/* Body */}
-              <div className="text-xs sm:text-sm text-black dark:text-slate-300 space-y-4 leading-relaxed font-medium">
-                <p className="text-base font-bold text-black dark:text-white">
+              <div className="text-xs sm:text-sm text-[#5F6070] dark:text-[#A9A7B8] space-y-4 leading-relaxed font-medium">
+                <p className="text-base font-bold text-[#11111A] dark:text-[#F8F7FF]">
                   {selectedPost.excerpt}
                 </p>
                 <p>{selectedPost.content}</p>
               </div>
 
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <span className="text-xs text-black dark:text-slate-400 font-bold">Need help implementing these tech architectures?</span>
+              <div className="pt-4 border-t border-[#E5E1F5] dark:border-[#28243A] flex flex-col sm:flex-row items-center justify-between gap-4">
+                <span className="text-xs text-[#5F6070] dark:text-[#A9A7B8] font-bold">Need help implementing these tech architectures?</span>
                 <button
                   onClick={() => {
                     openWhatsApp(`Hello Bynarixa Tech Solutions! I read your article "${selectedPost.title}" and want to consult on an implementation.`);
                     setSelectedPost(null);
                   }}
-                  className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-xs shadow-lg shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all"
+                  className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#06B6D4] text-white font-bold text-xs shadow-lg shadow-purple-500/25 hover:shadow-xl transition-all cursor-pointer"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
-                  <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
+                  <MessageSquare className="w-4 h-4 text-white" />
                   <span>Consult An Engineer</span>
                 </button>
               </div>

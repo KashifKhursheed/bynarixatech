@@ -46,23 +46,23 @@ export const PWAInstallPrompt: React.FC = () => {
       {/* Floating Bottom Install Banner (Responsive across all screens) */}
       {!bannerDismissed && (
         <div className="fixed bottom-24 sm:bottom-6 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md z-40 animate-fade-in pointer-events-auto">
-          <div className="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1117] border-2 border-slate-300 dark:border-[#00E5FF]/40 shadow-xl shadow-slate-900/15 dark:shadow-2xl dark:shadow-black/70 text-black dark:text-white flex items-center justify-between gap-3 transition-colors">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#11111A] border border-[#E5E1F5] dark:border-[#28243A] shadow-xl shadow-purple-500/10 dark:shadow-2xl dark:shadow-black/70 text-[#11111A] dark:text-[#F8F7FF] flex items-center justify-between gap-3 transition-colors">
             <div className="flex items-center gap-3 min-w-0">
               <div className="relative shrink-0">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] p-0.5 shadow-md flex items-center justify-center">
-                  <div className="w-full h-full bg-slate-900 dark:bg-[#070A0F] rounded-[10px] flex items-center justify-center text-[#00E5FF]">
-                    <Download className="w-5 h-5 animate-bounce text-white dark:text-[#00E5FF]" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#7C3AED] via-[#A855F7] to-[#06B6D4] p-0.5 shadow-md flex items-center justify-center">
+                  <div className="w-full h-full bg-white dark:bg-[#171525] rounded-[10px] flex items-center justify-center text-[#7C3AED] dark:text-[#A855F7]">
+                    <Download className="w-5 h-5 animate-bounce text-[#7C3AED] dark:text-[#A855F7]" />
                   </div>
                 </div>
-                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#10B981] animate-ping" />
+                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#06B6D4] animate-ping" />
               </div>
               <div className="truncate">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs sm:text-sm font-black text-black dark:text-white tracking-tight truncate">
+                  <span className="text-xs sm:text-sm font-bold text-[#11111A] dark:text-[#F8F7FF] tracking-tight truncate">
                     Install Bynarixa App
                   </span>
                 </div>
-                <p className="text-[11px] font-bold text-black dark:text-slate-400 truncate">
+                <p className="text-[11px] font-medium text-[#5F6070] dark:text-[#A9A7B8] truncate">
                   Fast native experience & offline access
                 </p>
               </div>
@@ -71,15 +71,15 @@ export const PWAInstallPrompt: React.FC = () => {
             <div className="flex items-center gap-2 shrink-0">
               <button
                 onClick={handleInstallClick}
-                className="px-4 py-2 rounded-xl bg-black hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-black text-xs shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 border border-black dark:border-transparent cursor-pointer"
+                className="px-4 py-2 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs shadow-md shadow-[#7C3AED]/20 hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer"
               >
-                <Download className="w-3.5 h-3.5 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
+                <Download className="w-3.5 h-3.5 text-white stroke-[2.5]" />
                 <span>Install</span>
               </button>
               <button
                 onClick={handleDismissBanner}
                 aria-label="Dismiss install banner"
-                className="p-1.5 rounded-lg text-black hover:text-red-600 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                className="p-1.5 rounded-lg text-[#5F6070] hover:text-red-600 dark:text-[#A9A7B8] dark:hover:text-white transition-colors cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -91,71 +91,71 @@ export const PWAInstallPrompt: React.FC = () => {
       {/* Interactive Installation Modal (For manual install / iOS guide / Desktop details) */}
       {showInstallModal && (
         <div className="fixed inset-0 z-[110] bg-black/75 backdrop-blur-md flex items-center justify-center p-4 animate-fade-in">
-          <div className="w-full max-w-lg rounded-3xl bg-white dark:bg-[#0D1117] border-2 border-slate-300 dark:border-[#263241] shadow-2xl overflow-hidden transition-colors">
+          <div className="w-full max-w-lg rounded-3xl bg-white dark:bg-[#11111A] border border-[#E5E1F5] dark:border-[#28243A] shadow-2xl overflow-hidden transition-colors">
             {/* Modal Header */}
-            <div className="p-6 bg-slate-900 dark:bg-[#070A0F] border-b border-slate-800 dark:border-[#263241] text-white flex items-center justify-between">
+            <div className="p-6 bg-[#F8F7FF] dark:bg-[#171525] border-b border-[#E5E1F5] dark:border-[#28243A] text-[#11111A] dark:text-[#F8F7FF] flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#0097A7] to-[#6D28D9] dark:from-[#00E5FF] dark:to-[#8B5CF6] p-0.5 flex items-center justify-center shadow-inner">
-                  <div className="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center text-white dark:text-[#00E5FF]">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#A855F7] p-0.5 flex items-center justify-center shadow-inner">
+                  <div className="w-full h-full bg-white dark:bg-[#09090F] rounded-[14px] flex items-center justify-center text-[#7C3AED] dark:text-[#A855F7]">
                     <Download className="w-6 h-6" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold tracking-tight text-white">Install Bynarixa App</h3>
-                  <p className="text-xs text-slate-300 dark:text-slate-400">Available on Android, iOS, Windows, Mac & Linux</p>
+                  <h3 className="text-lg font-bold tracking-tight text-[#11111A] dark:text-[#F8F7FF]">Install Bynarixa App</h3>
+                  <p className="text-xs text-[#5F6070] dark:text-[#A9A7B8]">Available on Android, iOS, Windows, Mac & Linux</p>
                 </div>
               </div>
               <button
                 onClick={() => setShowInstallModal(false)}
-                className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors"
+                className="p-2 rounded-xl bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 text-[#11111A] dark:text-white transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 space-y-6 max-h-[80vh] overflow-y-auto bg-white dark:bg-[#0D1117]">
+            <div className="p-6 space-y-6 max-h-[80vh] overflow-y-auto bg-white dark:bg-[#11111A]">
               {/* Feature Highlights Grid */}
               <div className="grid grid-cols-3 gap-3 text-center">
-                <div className="p-3 rounded-2xl bg-slate-50 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800">
-                  <Zap className="w-5 h-5 text-amber-500 mx-auto mb-1.5" />
-                  <div className="text-xs font-black text-black dark:text-white">Instant Launch</div>
-                  <div className="text-[10px] font-bold text-black dark:text-slate-400">Zero App Store wait</div>
+                <div className="p-3 rounded-2xl bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A]">
+                  <Zap className="w-5 h-5 text-[#A855F7] mx-auto mb-1.5" />
+                  <div className="text-xs font-bold text-[#11111A] dark:text-[#F8F7FF]">Instant Launch</div>
+                  <div className="text-[10px] font-medium text-[#5F6070] dark:text-[#A9A7B8]">Zero App Store wait</div>
                 </div>
-                <div className="p-3 rounded-2xl bg-slate-50 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800">
-                  <Globe className="w-5 h-5 text-cyan-600 dark:text-cyan-400 mx-auto mb-1.5" />
-                  <div className="text-xs font-black text-black dark:text-white">Offline Ready</div>
-                  <div className="text-[10px] font-bold text-black dark:text-slate-400">Works without data</div>
+                <div className="p-3 rounded-2xl bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A]">
+                  <Globe className="w-5 h-5 text-[#06B6D4] mx-auto mb-1.5" />
+                  <div className="text-xs font-bold text-[#11111A] dark:text-[#F8F7FF]">Offline Ready</div>
+                  <div className="text-[10px] font-medium text-[#5F6070] dark:text-[#A9A7B8]">Works without data</div>
                 </div>
-                <div className="p-3 rounded-2xl bg-slate-50 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800">
-                  <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400 mx-auto mb-1.5" />
-                  <div className="text-xs font-black text-black dark:text-white">Ultra Lightweight</div>
-                  <div className="text-[10px] font-bold text-black dark:text-slate-400">&lt; 1MB Storage</div>
+                <div className="p-3 rounded-2xl bg-[#F1EEFF] dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A]">
+                  <ShieldCheck className="w-5 h-5 text-[#7C3AED] mx-auto mb-1.5" />
+                  <div className="text-xs font-bold text-[#11111A] dark:text-[#F8F7FF]">Ultra Lightweight</div>
+                  <div className="text-[10px] font-medium text-[#5F6070] dark:text-[#A9A7B8]">&lt; 1MB Storage</div>
                 </div>
               </div>
 
               {/* OS Tabs */}
-              <div className="flex rounded-xl bg-slate-100 dark:bg-[#151B24] p-1 border border-slate-200 dark:border-slate-800">
+              <div className="flex rounded-xl bg-[#F1EEFF] dark:bg-[#171525] p-1 border border-[#E5E1F5] dark:border-[#28243A]">
                 <button
                   onClick={() => setActiveTab('mobile')}
-                  className={`flex-1 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${
+                  className={`flex-1 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
                     activeTab === 'mobile'
-                      ? 'bg-black text-white dark:bg-[#263241] dark:text-white shadow-sm border border-black dark:border-transparent'
-                      : 'text-black hover:bg-slate-200 dark:text-slate-400 dark:hover:text-white'
+                      ? 'bg-white dark:bg-[#11111A] text-[#7C3AED] dark:text-[#A855F7] shadow-sm border border-[#E5E1F5] dark:border-[#28243A]'
+                      : 'text-[#5F6070] dark:text-[#A9A7B8] hover:text-[#11111A] dark:hover:text-white'
                   }`}
                 >
-                  <Smartphone className="w-4 h-4 text-[#0097A7] dark:text-[#00E5FF]" />
+                  <Smartphone className="w-4 h-4 text-[#7C3AED] dark:text-[#A855F7]" />
                   <span>Mobile (iOS / Android)</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('desktop')}
-                  className={`flex-1 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${
+                  className={`flex-1 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
                     activeTab === 'desktop'
-                      ? 'bg-black text-white dark:bg-[#263241] dark:text-white shadow-sm border border-black dark:border-transparent'
-                      : 'text-black hover:bg-slate-200 dark:text-slate-400 dark:hover:text-white'
+                      ? 'bg-white dark:bg-[#11111A] text-[#7C3AED] dark:text-[#A855F7] shadow-sm border border-[#E5E1F5] dark:border-[#28243A]'
+                      : 'text-[#5F6070] dark:text-[#A9A7B8] hover:text-[#11111A] dark:hover:text-white'
                   }`}
                 >
-                  <Laptop className="w-4 h-4 text-[#6D28D9] dark:text-[#8B5CF6]" />
+                  <Laptop className="w-4 h-4 text-[#06B6D4]" />
                   <span>Desktop (Chrome / Edge / Safari)</span>
                 </button>
               </div>
@@ -164,55 +164,55 @@ export const PWAInstallPrompt: React.FC = () => {
               {activeTab === 'mobile' ? (
                 <div className="space-y-4">
                   {/* iOS Safari Instructions */}
-                  <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800 space-y-3">
-                    <div className="text-xs font-black text-black dark:text-[#00E5FF] flex items-center gap-1.5">
+                  <div className="p-4 rounded-2xl bg-[#F1EEFF]/60 dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] space-y-3">
+                    <div className="text-xs font-bold text-[#7C3AED] dark:text-[#A855F7] flex items-center gap-1.5">
                       <span>🍎 For Apple iPhone & iPad (Safari):</span>
                     </div>
-                    <div className="space-y-2.5 text-xs text-black dark:text-slate-300 font-semibold">
+                    <div className="space-y-2.5 text-xs text-[#11111A] dark:text-[#F8F7FF] font-medium">
                       <div className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-black text-white dark:bg-[#00E5FF]/20 dark:text-[#00E5FF] font-bold flex items-center justify-center shrink-0">1</span>
-                        <span>Tap the <strong>Share</strong> button <Share2 className="w-3.5 h-3.5 inline text-blue-600 dark:text-blue-400 mx-1" /> in Safari’s bottom toolbar.</span>
+                        <span className="w-6 h-6 rounded-full bg-[#7C3AED] text-white font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+                        <span>Tap the <strong>Share</strong> button <Share2 className="w-3.5 h-3.5 inline text-[#7C3AED] dark:text-[#A855F7] mx-1" /> in Safari’s bottom toolbar.</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-black text-white dark:bg-[#00E5FF]/20 dark:text-[#00E5FF] font-bold flex items-center justify-center shrink-0">2</span>
-                        <span>Scroll down and tap <strong>Add to Home Screen</strong> <PlusSquare className="w-3.5 h-3.5 inline text-emerald-600 dark:text-emerald-400 mx-1" />.</span>
+                        <span className="w-6 h-6 rounded-full bg-[#7C3AED] text-white font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+                        <span>Scroll down and tap <strong>Add to Home Screen</strong> <PlusSquare className="w-3.5 h-3.5 inline text-[#06B6D4] mx-1" />.</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-black text-white dark:bg-[#00E5FF]/20 dark:text-[#00E5FF] font-bold flex items-center justify-center shrink-0">3</span>
+                        <span className="w-6 h-6 rounded-full bg-[#7C3AED] text-white font-bold flex items-center justify-center shrink-0 text-xs">3</span>
                         <span>Tap <strong>Add</strong> in the top right corner to launch like a native app.</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Android Chrome Instructions */}
-                  <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800 space-y-3">
-                    <div className="text-xs font-black text-black dark:text-[#00E5FF]">
+                  <div className="p-4 rounded-2xl bg-[#F1EEFF]/60 dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] space-y-3">
+                    <div className="text-xs font-bold text-[#7C3AED] dark:text-[#A855F7]">
                       🤖 For Android (Chrome / Edge / Samsung Internet):
                     </div>
-                    <div className="space-y-2.5 text-xs text-black dark:text-slate-300 font-semibold">
+                    <div className="space-y-2.5 text-xs text-[#11111A] dark:text-[#F8F7FF] font-medium">
                       <div className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-black text-white dark:bg-[#00E5FF]/20 dark:text-[#00E5FF] font-bold flex items-center justify-center shrink-0">1</span>
+                        <span className="w-6 h-6 rounded-full bg-[#7C3AED] text-white font-bold flex items-center justify-center shrink-0 text-xs">1</span>
                         <span>Tap the <strong>Install Button</strong> below or browser menu (⋮).</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-black text-white dark:bg-[#00E5FF]/20 dark:text-[#00E5FF] font-bold flex items-center justify-center shrink-0">2</span>
+                        <span className="w-6 h-6 rounded-full bg-[#7C3AED] text-white font-bold flex items-center justify-center shrink-0 text-xs">2</span>
                         <span>Select <strong>Install App</strong> or <strong>Add to Home screen</strong>.</span>
                       </div>
                     </div>
                   </div>
                 </div>
               ) : (
-                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800 space-y-3">
-                  <div className="text-xs font-black text-black dark:text-[#00E5FF]">
+                <div className="p-4 rounded-2xl bg-[#F1EEFF]/60 dark:bg-[#171525] border border-[#E5E1F5] dark:border-[#28243A] space-y-3">
+                  <div className="text-xs font-bold text-[#7C3AED] dark:text-[#A855F7]">
                     💻 For Windows, Mac & Linux Desktop:
                   </div>
-                  <div className="space-y-2.5 text-xs text-black dark:text-slate-300 font-semibold">
+                  <div className="space-y-2.5 text-xs text-[#11111A] dark:text-[#F8F7FF] font-medium">
                     <div className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-black text-white dark:bg-[#00E5FF]/20 dark:text-[#00E5FF] font-bold flex items-center justify-center shrink-0">1</span>
+                      <span className="w-6 h-6 rounded-full bg-[#7C3AED] text-white font-bold flex items-center justify-center shrink-0 text-xs">1</span>
                       <span>Click the <strong>Install Icon</strong> in your browser address bar (top right) or the button below.</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-black text-white dark:bg-[#00E5FF]/20 dark:text-[#00E5FF] font-bold flex items-center justify-center shrink-0">2</span>
+                      <span className="w-6 h-6 rounded-full bg-[#7C3AED] text-white font-bold flex items-center justify-center shrink-0 text-xs">2</span>
                       <span>Confirm <strong>Install</strong> to get a standalone desktop window on your dock/taskbar.</span>
                     </div>
                   </div>
@@ -225,9 +225,9 @@ export const PWAInstallPrompt: React.FC = () => {
                   setShowInstallModal(false);
                   installApp();
                 }}
-                className="w-full py-3.5 px-6 rounded-xl bg-black hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-black text-sm shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all border border-black dark:border-transparent cursor-pointer"
+                className="w-full py-3.5 px-6 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-sm shadow-xl shadow-purple-500/25 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
               >
-                <Download className="w-4 h-4 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
+                <Download className="w-4 h-4 text-white stroke-[2.5]" />
                 <span>Launch Installation Now</span>
               </button>
             </div>
