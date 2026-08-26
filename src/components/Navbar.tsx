@@ -20,7 +20,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -38,15 +37,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;
       setIsScrolled(currentScroll > 20);
-      if (totalHeight > 0) {
-        setScrollProgress((currentScroll / totalHeight) * 100);
-      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -63,20 +58,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   return (
     <>
-      {/* Scroll Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-slate-200 dark:bg-[#263241] z-50">
-        <div
-          className="h-full bg-gradient-to-r from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] transition-all duration-150"
-          style={{ width: `${scrollProgress}%` }}
-        />
-      </div>
-
       {/* Main Sticky Navbar */}
       <header
-        className={`fixed top-1 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'py-3 glass-nav border-b border-[#E2E8F0] dark:border-[#263241] shadow-md'
-            : 'py-5 bg-transparent'
+            ? 'py-2.5 sm:py-3 glass-nav border-b border-[#E2E8F0] dark:border-[#263241] shadow-md shadow-slate-900/5'
+            : 'py-4 sm:py-5 bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,17 +72,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="flex items-center gap-3 group focus:outline-none"
+              className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] flex items-center justify-center text-white dark:text-black font-bold shadow-lg shadow-[#0097A7]/20 dark:shadow-[#00E5FF]/20 group-hover:scale-105 transition-transform">
-                <Terminal className="w-5 h-5" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] flex items-center justify-center text-white dark:text-black font-bold shadow-lg shadow-[#0097A7]/20 dark:shadow-[#00E5FF]/20 group-hover:scale-105 transition-transform">
+                <Terminal className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <span className="text-xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC] flex items-center gap-1">
+                <span className="text-lg sm:text-xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC] flex items-center gap-1">
                   Bynarixa <span className="text-[#0097A7] dark:text-[#00E5FF] font-extrabold">Tech</span>
                 </span>
-                <span className="block text-[10px] font-mono tracking-widest uppercase text-[#475569] dark:text-[#94A3B8]">
-                  01 Solutions
+                <span className="block text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-[#475569] dark:text-[#94A3B8]">
+                  Software Solutions
                 </span>
               </div>
             </a>

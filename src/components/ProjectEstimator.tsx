@@ -38,32 +38,32 @@ I'd like to confirm this quote and start my project.`;
   };
 
   return (
-    <section className="py-16 relative bg-slate-900 text-white overflow-hidden">
+    <section className="py-20 relative bg-slate-50/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0097A7]/10 dark:bg-[#00E5FF]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#6D28D9]/10 dark:bg-[#8B5CF6]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="glass-panel bg-slate-950/80 p-8 sm:p-12 rounded-3xl border border-slate-800 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="glass-panel bg-white/90 dark:bg-[#0D1117]/90 p-6 sm:p-10 lg:p-12 rounded-3xl border border-slate-200/90 dark:border-[#263241] shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Options Controls */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900/50 border border-blue-700/80 text-cyan-300 text-xs font-mono font-bold uppercase">
-                <Calculator className="w-4 h-4 text-cyan-400" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-cyan-300 text-xs font-mono font-bold uppercase">
+                <Calculator className="w-4 h-4 text-cyan-500" />
                 <span>Instant Project Scope Estimator</span>
               </div>
 
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                 Estimate Your <span className="text-gradient">Software Budget & Timeline</span>.
               </h2>
 
-              <p className="text-sm text-slate-300">
-                Select your parameters below for an instant rough estimate, then dispatch your quote directly to our engineering team on WhatsApp.
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Select your parameters below for an instant preliminary estimate, then dispatch your quote directly to our engineering team on WhatsApp.
               </p>
 
               {/* 1. Project Type */}
               <div className="space-y-2">
-                <label className="text-xs font-bold font-mono text-slate-400 uppercase">
+                <label className="text-xs font-bold font-mono text-slate-700 dark:text-slate-400 uppercase">
                   1. Project Category
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -78,8 +78,8 @@ I'd like to confirm this quote and start my project.`;
                       onClick={() => setProjectType(item.id)}
                       className={`p-2.5 rounded-xl text-xs font-medium border transition-all text-center ${
                         projectType === item.id
-                          ? 'bg-blue-600 border-blue-400 text-white shadow-md'
-                          : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
+                          ? 'bg-[#0097A7] dark:bg-[#00E5FF] border-transparent text-white dark:text-black font-bold shadow-md'
+                          : 'bg-slate-100/70 dark:bg-[#151B24] border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
                       }`}
                     >
                       {item.label}
@@ -90,7 +90,7 @@ I'd like to confirm this quote and start my project.`;
 
               {/* 2. Platform */}
               <div className="space-y-2">
-                <label className="text-xs font-bold font-mono text-slate-400 uppercase">
+                <label className="text-xs font-bold font-mono text-slate-700 dark:text-slate-400 uppercase">
                   2. Platform Scope
                 </label>
                 <div className="grid grid-cols-3 gap-2">
@@ -104,8 +104,8 @@ I'd like to confirm this quote and start my project.`;
                       onClick={() => setPlatform(item.id)}
                       className={`p-2.5 rounded-xl text-xs font-medium border transition-all text-center ${
                         platform === item.id
-                          ? 'bg-blue-600 border-blue-400 text-white shadow-md'
-                          : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
+                          ? 'bg-[#0097A7] dark:bg-[#00E5FF] border-transparent text-white dark:text-black font-bold shadow-md'
+                          : 'bg-slate-100/70 dark:bg-[#151B24] border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
                       }`}
                     >
                       {item.label}
@@ -115,10 +115,10 @@ I'd like to confirm this quote and start my project.`;
               </div>
 
               {/* 3. AI & Advanced Feature Toggle */}
-              <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+              <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-100/70 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800">
                 <div className="flex items-center gap-2.5">
-                  <Zap className="w-4 h-4 text-amber-400" />
-                  <span className="text-xs sm:text-sm font-medium text-slate-200">
+                  <Zap className="w-4 h-4 text-amber-500" />
+                  <span className="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200">
                     Include Gemini AI / LLM Integration
                   </span>
                 </div>
@@ -126,43 +126,43 @@ I'd like to confirm this quote and start my project.`;
                   type="checkbox"
                   checked={hasAI}
                   onChange={(e) => setHasAI(e.target.checked)}
-                  className="w-4 h-4 rounded text-blue-600 focus:ring-blue-500 bg-slate-800 border-slate-700"
+                  className="w-4 h-4 rounded text-[#0097A7] focus:ring-[#0097A7] bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
                 />
               </div>
             </div>
 
             {/* Right Result Card */}
-            <div className="lg:col-span-5 glass-panel bg-slate-900/90 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6 text-center">
+            <div className="lg:col-span-5 glass-panel bg-slate-50 dark:bg-[#151B24] p-6 sm:p-8 rounded-2xl border border-slate-200/90 dark:border-[#263241] space-y-6 text-center shadow-lg">
               <div>
-                <span className="text-xs font-mono uppercase text-cyan-400 font-bold tracking-wider">
+                <span className="text-xs font-mono uppercase text-[#0097A7] dark:text-[#00E5FF] font-bold tracking-wider">
                   ESTIMATED INVESTMENT RANGE
                 </span>
-                <div className="text-3xl sm:text-5xl font-extrabold text-white font-mono my-2">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white font-mono my-2">
                   ${min.toLocaleString()} - ${max.toLocaleString()}
                 </div>
-                <p className="text-xs text-slate-400">
-                  Includes full source code rights, UI/UX design, QA testing & 30-day post launch support.
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  Includes full source code rights, UI/UX design, QA testing & 30-day post launch SLA support.
                 </p>
               </div>
 
-              <div className="space-y-2 text-left text-xs text-slate-300 pt-4 border-t border-slate-800">
+              <div className="space-y-2.5 text-left text-xs text-slate-700 dark:text-slate-300 pt-4 border-t border-slate-200 dark:border-slate-800">
                 <div className="flex items-center justify-between">
                   <span>Estimated Timeframe:</span>
-                  <span className="font-mono text-cyan-400 font-bold">3 - 6 Weeks</span>
+                  <span className="font-mono text-[#0097A7] dark:text-[#00E5FF] font-bold">3 - 6 Weeks</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>Engineering Pod:</span>
-                  <span className="font-mono text-cyan-400 font-bold">3 Senior Engineers + QA</span>
+                  <span className="font-mono text-[#0097A7] dark:text-[#00E5FF] font-bold">3 Senior Engineers + QA</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>IP Code Ownership:</span>
-                  <span className="font-mono text-emerald-400 font-bold">100% Guaranteed</span>
+                  <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">100% Guaranteed</span>
                 </div>
               </div>
 
               <button
                 onClick={handleSendEstimate}
-                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-sm shadow-xl shadow-blue-500/25 transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] hover:opacity-95 text-white dark:text-black font-bold text-sm shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>Send Quote To WhatsApp</span>
