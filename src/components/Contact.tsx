@@ -106,21 +106,23 @@ export const Contact: React.FC = () => {
 
               {/* Phone / WhatsApp */}
               <div
-                onClick={() => openWhatsApp('Hello Bynarixa Tech Solutions!')}
-                className="flex items-start gap-4 p-4 rounded-2xl bg-blue-50/60 dark:bg-slate-800/60 border border-blue-100 dark:border-slate-700 cursor-pointer hover:border-blue-500 transition-all group"
+                onClick={() => openWhatsApp('Hello Bynarixa Tech Solutions! I would like to chat with your engineering consultant.')}
+                className="relative overflow-hidden flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50/50 dark:from-[#092B21]/60 dark:to-[#0D1F2D]/60 border border-[#25D366]/40 dark:border-[#00E5FF]/40 cursor-pointer hover:border-[#25D366] dark:hover:border-[#00E5FF] transition-all group shadow-sm hover:shadow-md"
               >
-                <div className="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform">
-                  <Phone className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform">
+                  <Phone className="w-6 h-6 animate-bot-wiggle" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono uppercase text-slate-500 dark:text-slate-400 font-bold">
-                    Phone & WhatsApp Direct
+                  <div className="text-[11px] font-mono uppercase text-[#0F5132] dark:text-emerald-400 font-bold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping" />
+                    <span>WhatsApp AI & Engineering Direct</span>
                   </div>
-                  <div className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400">
+                  <div className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-cyan-400">
                     {LOCAL_PHONE} ({DISPLAY_PHONE})
                   </div>
-                  <div className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">
-                    Tap to Chat Instantly on WhatsApp →
+                  <div className="text-xs text-[#059669] dark:text-[#00E5FF] font-semibold mt-0.5 flex items-center gap-1">
+                    <span>Tap to Chat on WhatsApp (Active 24/7)</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
                   </div>
                 </div>
               </div>
@@ -362,8 +364,9 @@ export const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-sm shadow-xl shadow-blue-500/20 hover:shadow-blue-500/35 transition-all flex items-center justify-center gap-2"
+                    className="w-full relative overflow-hidden group py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] hover:opacity-95 text-white dark:text-black font-extrabold text-sm shadow-xl shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl hover:shadow-[#25D366]/35 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99]"
                   >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
                     {loading ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
@@ -371,8 +374,8 @@ export const Contact: React.FC = () => {
                       </>
                     ) : (
                       <>
-                        <Send className="w-4 h-4" />
-                        <span>Submit Project Inquiry & Connect on WhatsApp</span>
+                        <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                        <span>Submit Inquiry & Connect via WhatsApp AI</span>
                       </>
                     )}
                   </button>

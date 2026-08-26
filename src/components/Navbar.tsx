@@ -126,13 +126,18 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 )}
               </button>
 
-              {/* WhatsApp / Direct Quote Button */}
+              {/* WhatsApp / AI Direct Quote Button */}
               <button
-                onClick={() => openWhatsApp('Hello Bynarixa Tech Solutions! I want to request a free project quote.')}
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0097A7] hover:bg-[#008392] dark:bg-[#00E5FF] dark:hover:bg-[#00CCE5] text-white dark:text-black font-semibold text-xs sm:text-sm shadow-md shadow-[#0097A7]/20 dark:shadow-[#00E5FF]/20 transition-all hover:-translate-y-0.5"
+                onClick={() => openWhatsApp('Hello Bynarixa Tech Solutions! I want to request a free project quote from your AI Consultant.')}
+                className="hidden sm:inline-flex relative overflow-hidden group items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black font-bold text-xs sm:text-sm shadow-md shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-lg hover:shadow-[#25D366]/40 transition-all duration-300 hover:scale-105 active:scale-95"
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white dark:bg-black opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-white dark:bg-black" />
+                </span>
                 <MessageSquare className="w-4 h-4" />
-                <span>Get Quote</span>
+                <span>AI WhatsApp Chat</span>
               </button>
 
               {/* Mobile Menu Toggle */}
@@ -182,12 +187,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  openWhatsApp('Hello Bynarixa Tech Solutions! I would like to start a project.');
+                  openWhatsApp('Hello Bynarixa Tech Solutions! I would like to start a project via your AI Consultant.');
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] text-white dark:text-black font-semibold text-sm shadow-md"
+                className="w-full relative overflow-hidden group flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black font-extrabold text-sm shadow-lg shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all"
               >
-                <Sparkles className="w-4 h-4" />
-                <span>Start Your Project</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
+                <MessageSquare className="w-4 h-4" />
+                <span>Chat with AI on WhatsApp</span>
               </button>
             </div>
           </div>

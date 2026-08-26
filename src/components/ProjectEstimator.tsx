@@ -162,10 +162,11 @@ I'd like to confirm this quote and start my project.`;
 
               <button
                 onClick={handleSendEstimate}
-                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#0097A7] via-[#6D28D9] to-[#DB2777] dark:from-[#00E5FF] dark:via-[#8B5CF6] dark:to-[#FF2BD6] hover:opacity-95 text-white dark:text-black font-bold text-sm shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full relative overflow-hidden group inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] hover:opacity-95 text-white dark:text-black font-extrabold text-sm shadow-xl shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl hover:shadow-[#25D366]/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/35 to-transparent animate-shimmer-sweep pointer-events-none" />
                 <MessageSquare className="w-4 h-4" />
-                <span>Send Quote To WhatsApp</span>
+                <span>Send Estimate To WhatsApp AI</span>
               </button>
             </div>
           </div>

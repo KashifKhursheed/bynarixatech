@@ -13,6 +13,7 @@ import {
   Smartphone,
   Globe,
   Zap,
+  MessageSquare,
 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
@@ -139,18 +140,20 @@ export const Hero: React.FC = () => {
               <button
                 onClick={() =>
                   openWhatsApp(
-                    'Hello Bynarixa Tech Solutions! I would like to get a free project quote.'
+                    'Hello Bynarixa Tech Solutions! I would like to get a free project quote from your AI Consultant.'
                   )
                 }
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#0097A7] hover:bg-[#008392] dark:bg-[#00E5FF] dark:hover:bg-[#00CCE5] text-white dark:text-black font-bold text-sm sm:text-base shadow-lg shadow-[#0097A7]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black font-extrabold text-sm sm:text-base shadow-xl shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl hover:shadow-[#25D366]/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
               >
-                <span>Get a Free Quote</span>
-                <ArrowRight className="w-5 h-5" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
+                <MessageSquare className="w-5 h-5" />
+                <span>Chat with AI on WhatsApp</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
               <a
                 href="#portfolio"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white dark:bg-[#0D1117] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#0097A7] dark:hover:text-[#00E5FF] font-bold text-sm sm:text-base border border-[#E2E8F0] dark:border-[#263241] transition-all hover:bg-[#F1F5F9] dark:hover:bg-[#151B24]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/90 dark:bg-[#0D1117] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#0097A7] dark:hover:text-[#00E5FF] font-bold text-sm sm:text-base border border-[#E2E8F0] dark:border-[#263241] transition-all hover:bg-[#F1F5F9] dark:hover:bg-[#151B24] shadow-sm hover:shadow-md"
               >
                 <Play className="w-4 h-4 fill-current text-[#0097A7] dark:text-[#00E5FF]" />
                 <span>View Case Studies</span>

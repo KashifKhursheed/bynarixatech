@@ -109,17 +109,18 @@ export const Pricing: React.FC = () => {
                 <button
                   onClick={() =>
                     openWhatsApp(
-                      `Hello Bynarixa Tech Solutions! I am interested in the ${plan.name} plan ($${price}/mo). Let's start.`
+                      `Hello Bynarixa Tech Solutions! I am interested in the ${plan.name} plan ($${price}/mo) from your AI pricing guide. Let's discuss requirements.`
                     )
                   }
-                  className={`w-full py-3.5 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
+                  className={`w-full relative overflow-hidden group py-3.5 px-6 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 text-white hover:shadow-lg shadow-blue-500/25'
-                      : 'bg-slate-900 dark:bg-slate-800 text-white hover:bg-slate-800 dark:hover:bg-slate-700'
+                      ? 'bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl'
+                      : 'bg-slate-900 hover:bg-slate-800 dark:bg-[#151B24] dark:hover:bg-[#1A2330] text-white border border-slate-700/50 hover:border-[#25D366] dark:hover:border-[#00E5FF]'
                   }`}
                 >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Choose {plan.name}</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-shimmer-sweep pointer-events-none" />
+                  <MessageSquare className="w-4 h-4 text-[#25D366] dark:text-[#00E5FF]" />
+                  <span>Choose {plan.name} via WhatsApp</span>
                 </button>
               </div>
             );
