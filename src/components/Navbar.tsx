@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from './ThemeContext';
+import { usePWA } from './PWAInstallContext';
 import { openWhatsApp, DISPLAY_PHONE } from '../utils/whatsapp';
 import {
   Sun,
@@ -10,6 +11,7 @@ import {
   Sparkles,
   Terminal,
   ArrowRight,
+  Download,
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -18,6 +20,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const { theme, toggleTheme } = useTheme();
+  const { isInstalled, installApp } = usePWA();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -112,7 +115,19 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             </nav>
 
             {/* Right Controls */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
+              {/* Install PWA App Button (Desktop & Tablet) */}
+              {!isInstalled && (
+                <button
+                  onClick={installApp}
+                  aria-label="Install App as PWA"
+                  className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 dark:bg-[#151B24] hover:bg-[#0097A7]/10 dark:hover:bg-[#00E5FF]/10 text-slate-800 dark:text-slate-200 hover:text-[#0097A7] dark:hover:text-[#00E5FF] border border-slate-200 dark:border-[#263241] text-xs font-bold transition-all hover:scale-105 active:scale-95"
+                >
+                  <Download className="w-3.5 h-3.5 text-[#0097A7] dark:text-[#00E5FF]" />
+                  <span>Install App</span>
+                </button>
+              )}
+
               {/* Theme Switcher */}
               <button
                 onClick={toggleTheme}
@@ -184,6 +199,19 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             </div>
 
             <div className="pt-6 border-t border-[#E2E8F0] dark:border-[#263241] space-y-3">
+              {!isInstalled && (
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    installApp();
+                  }}
+                  className="w-full py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold text-xs flex items-center justify-center gap-2 hover:bg-slate-200 dark:hover:bg-[#1A2330] transition-colors"
+                >
+                  <Download className="w-4 h-4 text-[#0097A7] dark:text-[#00E5FF]" />
+                  <span>Install App to Home Screen</span>
+                </button>
+              )}
+
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);

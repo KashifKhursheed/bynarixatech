@@ -1,0 +1,53 @@
+{
+  "name": "Bynarixa Tech Solutions",
+  "short_name": "BynarixaTech",
+  "description": "Engineering the Future with Intelligent Software. Premier Mobile, Web & Enterprise AI Solutions.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "background_color": "#070A0F",
+  "theme_color": "#0097A7",
+  "orientation": "any",
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "categories": ["business", "productivity", "utilities", "developer tools"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI WhatsApp Consultant",
+      "short_name": "AI Chat",
+      "description": "Instant 24/7 AI software quote and consultation",
+      "url": "/#contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Project Estimator",
+      "short_name": "Estimator",
+      "description": "Calculate instant software budget and timeline",
+      "url": "/#services",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Case Studies",
+      "short_name": "Portfolio",
+      "description": "Explore delivered client software applications",
+      "url": "/#portfolio",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from './components/ThemeContext';
+import { PWAProvider } from './components/PWAInstallContext';
 import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { Navbar } from './components/Navbar';
+import { PWAInstallPrompt } from './components/PWAInstallPrompt';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Services } from './components/Services';
@@ -60,42 +62,47 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#070A0F] text-[#0F172A] dark:text-[#F8FAFC] transition-colors duration-300 selection:bg-[#00E5FF] selection:text-black relative overflow-hidden">
-        {/* Subtle Background Glow Accents from Brand Palette */}
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-[#0097A7]/10 dark:bg-[#00E5FF]/15 rounded-full blur-[140px] pointer-events-none z-0" />
-        <div className="absolute top-[40%] right-[-10%] w-[45%] h-[45%] bg-[#6D28D9]/10 dark:bg-[#8B5CF6]/15 rounded-full blur-[140px] pointer-events-none z-0" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#DB2777]/10 dark:bg-[#FF2BD6]/10 rounded-full blur-[140px] pointer-events-none z-0" />
+      <PWAProvider>
+        <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#070A0F] text-[#0F172A] dark:text-[#F8FAFC] transition-colors duration-300 selection:bg-[#00E5FF] selection:text-black relative overflow-hidden">
+          {/* Subtle Background Glow Accents from Brand Palette */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-[#0097A7]/10 dark:bg-[#00E5FF]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+          <div className="absolute top-[40%] right-[-10%] w-[45%] h-[45%] bg-[#6D28D9]/10 dark:bg-[#8B5CF6]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+          <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#DB2777]/10 dark:bg-[#FF2BD6]/10 rounded-full blur-[140px] pointer-events-none z-0" />
 
-        {/* Top Animated Scroll Depth Progress Bar */}
-        <ScrollProgressBar />
+          {/* Top Animated Scroll Depth Progress Bar */}
+          <ScrollProgressBar />
 
-        {/* Navigation */}
-        <Navbar activeSection={activeSection} />
+          {/* Navigation */}
+          <Navbar activeSection={activeSection} />
 
-        {/* Main Content Sections */}
-        <main>
-          <Hero />
-          <About />
-          <Services />
-          <Technologies />
-          <WhyChooseUs />
-          <Process />
-          <Portfolio />
-          <ProjectEstimator />
-          <Testimonials />
-          <Pricing />
-          <Careers />
-          <FAQ />
-          <Blog />
-          <Contact />
-        </main>
+          {/* Main Content Sections */}
+          <main>
+            <Hero />
+            <About />
+            <Services />
+            <Technologies />
+            <WhyChooseUs />
+            <Process />
+            <Portfolio />
+            <ProjectEstimator />
+            <Testimonials />
+            <Pricing />
+            <Careers />
+            <FAQ />
+            <Blog />
+            <Contact />
+          </main>
 
-        {/* Footer */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
 
-        {/* Floating WhatsApp Quick Action Button */}
-        <FloatingWhatsApp />
-      </div>
+          {/* Floating WhatsApp Quick Action Button */}
+          <FloatingWhatsApp />
+
+          {/* PWA App Install Banner & Modal Guide */}
+          <PWAInstallPrompt />
+        </div>
+      </PWAProvider>
     </ThemeProvider>
   );
 }
