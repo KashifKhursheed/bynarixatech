@@ -71,15 +71,15 @@ export const PWAInstallPrompt: React.FC = () => {
             <div className="flex items-center gap-2 shrink-0">
               <button
                 onClick={handleInstallClick}
-                className="px-4 py-2 rounded-xl bg-slate-950 hover:bg-slate-850 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-extrabold text-xs shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 border border-slate-900 dark:border-transparent"
+                className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-black text-xs shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 border border-slate-900 dark:border-transparent"
               >
-                <Download className="w-3.5 h-3.5 stroke-[2.5]" />
+                <Download className="w-3.5 h-3.5 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
                 <span>Install</span>
               </button>
               <button
                 onClick={handleDismissBanner}
                 aria-label="Dismiss install banner"
-                className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -225,9 +225,9 @@ export const PWAInstallPrompt: React.FC = () => {
                   setShowInstallModal(false);
                   installApp();
                 }}
-                className="w-full py-3.5 px-6 rounded-xl bg-slate-950 hover:bg-slate-850 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-extrabold text-sm shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all border border-slate-900 dark:border-transparent"
+                className="w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-black text-sm shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all border border-slate-900 dark:border-transparent"
               >
-                <Download className="w-4 h-4 stroke-[2.5]" />
+                <Download className="w-4 h-4 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
                 <span>Launch Installation Now</span>
               </button>
             </div>

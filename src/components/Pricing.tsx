@@ -24,23 +24,23 @@ export const Pricing: React.FC = () => {
 
           {/* Billing Toggle */}
           <div className="pt-4 flex items-center justify-center gap-3">
-            <span className={`text-xs sm:text-sm font-medium ${!isAnnual ? 'text-blue-600 dark:text-cyan-400 font-bold' : 'text-slate-500'}`}>
+            <span className={`text-xs sm:text-sm font-bold ${!isAnnual ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-slate-400'}`}>
               Monthly Sprints
             </span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className="w-14 h-8 rounded-full bg-slate-200 dark:bg-slate-800 p-1 transition-colors relative"
+              className="w-14 h-8 rounded-full bg-slate-200 dark:bg-slate-800 p-1 transition-colors relative border border-slate-300 dark:border-slate-700"
               aria-label="Toggle Billing Frequency"
             >
               <div
-                className={`w-6 h-6 rounded-full bg-blue-600 transition-transform ${
+                className={`w-6 h-6 rounded-full bg-slate-900 dark:bg-[#00E5FF] transition-transform ${
                   isAnnual ? 'translate-x-6' : 'translate-x-0'
                 }`}
               />
             </button>
-            <span className={`text-xs sm:text-sm font-medium flex items-center gap-1.5 ${isAnnual ? 'text-blue-600 dark:text-cyan-400 font-bold' : 'text-slate-500'}`}>
+            <span className={`text-xs sm:text-sm font-bold flex items-center gap-1.5 ${isAnnual ? 'text-blue-700 dark:text-[#00E5FF]' : 'text-slate-600 dark:text-slate-400'}`}>
               Annual Contract
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-black">
                 SAVE 20%
               </span>
             </span>
@@ -112,14 +112,14 @@ export const Pricing: React.FC = () => {
                       `Hello Bynarixa Tech Solutions! I am interested in the ${plan.name} plan ($${price}/mo) from your AI pricing guide. Let's discuss requirements.`
                     )
                   }
-                  className={`w-full relative overflow-hidden group py-3.5 px-6 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] ${
+                  className={`w-full relative overflow-hidden group py-3.5 px-6 rounded-xl font-black text-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl'
-                      : 'bg-slate-900 hover:bg-slate-800 dark:bg-[#151B24] dark:hover:bg-[#1A2330] text-white border border-slate-700/50 hover:border-[#25D366] dark:hover:border-[#00E5FF]'
+                      ? 'bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl'
+                      : 'bg-slate-900 hover:bg-slate-800 dark:bg-[#151B24] dark:hover:bg-[#1A2330] text-white border border-slate-900 dark:border-slate-700'
                   }`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-shimmer-sweep pointer-events-none" />
-                  <MessageSquare className="w-4 h-4 text-[#25D366] dark:text-[#00E5FF]" />
+                  <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
                   <span>Choose {plan.name} via WhatsApp</span>
                 </button>
               </div>

@@ -55,7 +55,7 @@ export const Careers: React.FC = () => {
 
               <button
                 onClick={() => setSelectedJob(job)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-2.5 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs shadow-md transition-all shrink-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-2.5 px-5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-bold text-xs shadow-md transition-all shrink-0 border border-slate-900 dark:border-transparent"
               >
                 <span>View Position & Apply</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -134,9 +134,10 @@ export const Careers: React.FC = () => {
                   );
                   setSelectedJob(null);
                 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-medium text-xs shadow-md"
+                className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-xs shadow-lg shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all"
               >
-                <Send className="w-4 h-4" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
+                <Send className="w-4 h-4 text-white dark:text-slate-950" />
                 <span>Apply via WhatsApp</span>
               </button>
             </div>

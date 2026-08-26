@@ -153,14 +153,14 @@ export const Process: React.FC = () => {
                   <button
                     disabled={activeStep === 1}
                     onClick={() => setActiveStep((prev) => Math.max(1, prev - 1))}
-                    className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium disabled:opacity-40"
+                    className="px-3.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 disabled:opacity-40"
                   >
                     Previous
                   </button>
                   <button
                     disabled={activeStep === 7}
                     onClick={() => setActiveStep((prev) => Math.min(7, prev + 1))}
-                    className="px-3 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-medium disabled:opacity-40"
+                    className="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 text-xs font-bold disabled:opacity-40 border border-slate-900 dark:border-transparent shadow-sm"
                   >
                     Next Step
                   </button>

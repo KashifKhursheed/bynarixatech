@@ -38,10 +38,10 @@ export const Blog: React.FC = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
                 activeCategory === cat
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                  ? 'bg-slate-900 dark:bg-[#00E5FF] text-white dark:text-slate-950 shadow-md border border-slate-900 dark:border-transparent'
+                  : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border-2 border-slate-200 dark:border-slate-700'
               }`}
             >
               {cat}
@@ -97,7 +97,7 @@ export const Blog: React.FC = () => {
               <div className="p-5 pt-0">
                 <button
                   onClick={() => setSelectedPost(post)}
-                  className="w-full inline-flex items-center justify-between py-2 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-blue-600 hover:text-white transition-all text-xs font-semibold"
+                  className="w-full inline-flex items-center justify-between py-2 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-900 hover:text-white dark:hover:bg-[#00E5FF] dark:hover:text-slate-950 transition-all text-xs font-bold border border-slate-200 dark:border-slate-700"
                 >
                   <span>Read Full Article</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -160,16 +160,17 @@ export const Blog: React.FC = () => {
                 <p>{selectedPost.content}</p>
               </div>
 
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-                <span className="text-xs text-slate-500">Need help implementing these tech architectures?</span>
+              <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">Need help implementing these tech architectures?</span>
                 <button
                   onClick={() => {
                     openWhatsApp(`Hello Bynarixa Tech Solutions! I read your article "${selectedPost.title}" and want to consult on an implementation.`);
                     setSelectedPost(null);
                   }}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white font-medium text-xs"
+                  className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-xs shadow-lg shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
+                  <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
                   <span>Consult An Engineer</span>
                 </button>
               </div>

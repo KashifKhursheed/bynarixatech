@@ -364,17 +364,17 @@ export const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full relative overflow-hidden group py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] hover:opacity-95 text-white dark:text-black font-extrabold text-sm shadow-xl shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl hover:shadow-[#25D366]/35 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99]"
+                    className="w-full relative overflow-hidden group py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-sm shadow-xl shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl transition-all flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99]"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
                     {loading ? (
                       <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <Loader2 className="w-4 h-4 animate-spin text-white dark:text-slate-950" />
                         <span>Sending Request...</span>
                       </>
                     ) : (
                       <>
-                        <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                        <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform text-white dark:text-slate-950" />
                         <span>Submit Inquiry & Connect via WhatsApp AI</span>
                       </>
                     )}

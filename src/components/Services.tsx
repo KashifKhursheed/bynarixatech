@@ -94,10 +94,10 @@ export const Services: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${
                   selectedCategory === cat.id
-                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                    : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                    ? 'bg-slate-900 dark:bg-[#00E5FF] text-white dark:text-slate-950 shadow-md border border-slate-900 dark:border-transparent'
+                    : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border-2 border-slate-200 dark:border-slate-700'
                 }`}
               >
                 {cat.label}
@@ -113,7 +113,7 @@ export const Services: React.FC = () => {
               placeholder="Search services or tech stack..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-10 pr-4 py-2 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
             />
           </div>
         </div>
@@ -133,7 +133,7 @@ export const Services: React.FC = () => {
                     <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-cyan-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-semibold">
+                    <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold">
                       {service.category}
                     </span>
                   </div>
@@ -151,13 +151,13 @@ export const Services: React.FC = () => {
                     {service.techStack.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 font-mono"
+                        className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 font-mono font-semibold"
                       >
                         {tech}
                       </span>
                     ))}
                     {service.techStack.length > 3 && (
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-cyan-300 font-mono">
+                      <span className="text-[10px] px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-cyan-300 font-mono font-bold">
                         +{service.techStack.length - 3}
                       </span>
                     )}
@@ -167,7 +167,7 @@ export const Services: React.FC = () => {
                 {/* Learn More Action Button */}
                 <button
                   onClick={() => setActiveModalService(service)}
-                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white dark:hover:bg-cyan-500 dark:hover:text-slate-950 text-slate-800 dark:text-slate-200 font-medium text-xs transition-all group-hover:shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-900 hover:text-white dark:hover:bg-[#00E5FF] dark:hover:text-slate-950 text-slate-900 dark:text-slate-100 font-bold text-xs transition-all border border-slate-200 dark:border-slate-700 shadow-xs"
                 >
                   <span>Learn More & Specs</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -279,10 +279,10 @@ export const Services: React.FC = () => {
                   );
                   setActiveModalService(null);
                 }}
-                className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black font-extrabold text-sm shadow-lg shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-sm shadow-lg shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
                 <span>Discuss on WhatsApp AI</span>
               </button>
             </div>

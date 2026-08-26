@@ -91,10 +91,10 @@ export const Technologies: React.FC = () => {
             <button
               key={cat}
               onClick={() => setActiveTab(cat)}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
                 activeTab === cat
-                  ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/20'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                  ? 'bg-slate-900 dark:bg-[#00E5FF] text-white dark:text-slate-950 shadow-md border border-slate-900 dark:border-transparent'
+                  : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border-2 border-slate-200 dark:border-slate-700'
               }`}
             >
               {cat}

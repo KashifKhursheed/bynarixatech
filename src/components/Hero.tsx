@@ -143,40 +143,40 @@ export const Hero: React.FC = () => {
                     'Hello Bynarixa Tech Solutions! I would like to get a free project quote from your AI Consultant.'
                   )
                 }
-                className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black font-extrabold text-sm sm:text-base shadow-xl shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl hover:shadow-[#25D366]/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
+                className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-sm sm:text-base shadow-xl shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
-                <MessageSquare className="w-5 h-5" />
+                <MessageSquare className="w-5 h-5 text-white dark:text-slate-950" />
                 <span>Chat with AI on WhatsApp</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-white dark:text-slate-950" />
               </button>
 
               <a
                 href="#portfolio"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/90 dark:bg-[#0D1117] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#0097A7] dark:hover:text-[#00E5FF] font-bold text-sm sm:text-base border border-[#E2E8F0] dark:border-[#263241] transition-all hover:bg-[#F1F5F9] dark:hover:bg-[#151B24] shadow-sm hover:shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white dark:bg-[#0D1117] text-slate-900 dark:text-[#F8FAFC] hover:text-[#00838F] dark:hover:text-[#00E5FF] font-black text-sm sm:text-base border-2 border-slate-300 dark:border-[#263241] transition-all hover:bg-slate-50 dark:hover:bg-[#151B24] shadow-sm hover:shadow-md"
               >
-                <Play className="w-4 h-4 fill-current text-[#0097A7] dark:text-[#00E5FF]" />
+                <Play className="w-4 h-4 fill-current text-[#00838F] dark:text-[#00E5FF]" />
                 <span>View Case Studies</span>
               </a>
             </div>
 
             {/* Metrics Stats Section */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-[#E2E8F0] dark:border-[#263241]">
-              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">500+</div>
-                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Projects</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200 dark:border-[#263241]">
+              <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
+                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">500+</div>
+                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Projects</div>
               </div>
-              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">98%</div>
-                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Retention</div>
+              <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
+                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">98%</div>
+                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Retention</div>
               </div>
-              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">25+</div>
-                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Countries</div>
+              <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
+                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">25+</div>
+                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Countries</div>
               </div>
-              <div className="bg-white/80 dark:bg-[#0D1117] border border-[#E2E8F0] dark:border-[#263241] rounded-2xl p-3.5 text-center backdrop-blur-md">
-                <div className="text-2xl font-bold text-[#0F172A] dark:text-[#F8FAFC] font-mono">12+</div>
-                <div className="text-[10px] text-[#475569] dark:text-[#94A3B8] uppercase tracking-widest font-semibold mt-0.5">Experience</div>
+              <div className="bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#263241] rounded-2xl p-3.5 text-center shadow-xs">
+                <div className="text-2xl font-black text-slate-900 dark:text-[#F8FAFC] font-mono">12+</div>
+                <div className="text-[10px] text-slate-600 dark:text-[#94A3B8] uppercase tracking-widest font-bold mt-0.5">Experience</div>
               </div>
             </div>
           </div>

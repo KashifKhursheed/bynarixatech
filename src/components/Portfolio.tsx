@@ -46,10 +46,10 @@ export const Portfolio: React.FC = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
                 activeCategory === cat
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                  ? 'bg-slate-900 dark:bg-[#00E5FF] text-white dark:text-slate-950 shadow-md border border-slate-900 dark:border-transparent'
+                  : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border-2 border-slate-200 dark:border-slate-700'
               }`}
             >
               {cat}
@@ -111,7 +111,7 @@ export const Portfolio: React.FC = () => {
               <div className="p-6 pt-0 flex items-center gap-3">
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="flex-1 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs shadow-md shadow-blue-500/20 transition-all text-center"
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-bold text-xs shadow-md transition-all text-center border border-slate-900 dark:border-transparent"
                 >
                   Read Case Study
                 </button>
@@ -121,7 +121,7 @@ export const Portfolio: React.FC = () => {
                       `Hello Bynarixa Tech Solutions! I saw the case study for ${project.title} and want to discuss something similar.`
                     )
                   }
-                  className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+                  className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700"
                   aria-label="Discuss project on WhatsApp"
                 >
                   <ExternalLink className="w-4 h-4" />
@@ -242,9 +242,10 @@ export const Portfolio: React.FC = () => {
                     );
                     setSelectedProject(null);
                   }}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-sm shadow-md"
+                  className="w-full sm:w-auto relative overflow-hidden group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-sm shadow-lg shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
+                  <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
                   <span>Discuss Case Study on WhatsApp</span>
                 </button>
               </div>

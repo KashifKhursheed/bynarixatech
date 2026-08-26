@@ -121,9 +121,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 <button
                   onClick={installApp}
                   aria-label="Install App"
-                  className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-[#151B24] hover:bg-slate-50 dark:hover:bg-[#1C2430] text-slate-950 dark:text-white border-2 border-slate-200 dark:border-[#00E5FF]/40 shadow-sm text-xs font-extrabold transition-all hover:scale-105 active:scale-95"
+                  className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 shadow-md text-xs font-black transition-all hover:scale-105 active:scale-95 border border-slate-900 dark:border-transparent"
                 >
-                  <Download className="w-3.5 h-3.5 text-[#0097A7] dark:text-[#00E5FF] stroke-[2.5]" />
+                  <Download className="w-3.5 h-3.5 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
                   <span>Install App</span>
                 </button>
               )}
@@ -132,7 +132,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle Light and Dark Mode"
-                className="p-2.5 rounded-xl bg-[#F1F5F9] dark:bg-[#151B24] text-[#0F172A] dark:text-[#F8FAFC] border border-[#E2E8F0] dark:border-[#263241] hover:text-[#0097A7] dark:hover:text-[#00E5FF] transition-all"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#151B24] text-slate-900 dark:text-[#F8FAFC] border border-slate-300 dark:border-[#263241] hover:text-[#0097A7] dark:hover:text-[#00E5FF] transition-all"
               >
                 {theme === 'dark' ? (
                   <Sun className="w-4 h-4 text-[#00E5FF] animate-spin-slow" />
@@ -144,14 +144,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               {/* WhatsApp / AI Direct Quote Button */}
               <button
                 onClick={() => openWhatsApp('Hello Bynarixa Tech Solutions! I want to request a free project quote from your AI Consultant.')}
-                className="hidden sm:inline-flex relative overflow-hidden group items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black font-bold text-xs sm:text-sm shadow-md shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-lg hover:shadow-[#25D366]/40 transition-all duration-300 hover:scale-105 active:scale-95"
+                className="hidden sm:inline-flex relative overflow-hidden group items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-xs sm:text-sm shadow-md shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white dark:bg-black opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-white dark:bg-black" />
                 </span>
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
                 <span>AI WhatsApp Chat</span>
               </button>
 
@@ -198,16 +198,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               ))}
             </div>
 
-            <div className="pt-6 border-t border-[#E2E8F0] dark:border-[#263241] space-y-3">
+            <div className="pt-6 border-t border-slate-200 dark:border-[#263241] space-y-3">
               {!isInstalled && (
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
                     installApp();
                   }}
-                  className="w-full py-3 px-4 rounded-xl bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-[#00E5FF]/40 text-slate-950 dark:text-white font-extrabold text-xs flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-[#1C2430] transition-all shadow-sm active:scale-98"
+                  className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-[#00E5FF] dark:hover:bg-[#38EFFF] text-white dark:text-slate-950 font-black text-xs flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 border border-slate-900 dark:border-transparent"
                 >
-                  <Download className="w-4 h-4 text-[#0097A7] dark:text-[#00E5FF] stroke-[2.5]" />
+                  <Download className="w-4 h-4 text-[#00E5FF] dark:text-slate-950 stroke-[2.5]" />
                   <span>Install App to Device</span>
                 </button>
               )}
@@ -217,10 +217,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                   setMobileMenuOpen(false);
                   openWhatsApp('Hello Bynarixa Tech Solutions! I would like to start a project via your AI Consultant.');
                 }}
-                className="w-full relative overflow-hidden group flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-black font-extrabold text-sm shadow-lg shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all"
+                className="w-full relative overflow-hidden group flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-sm shadow-lg shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-xl transition-all"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-sweep pointer-events-none" />
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
                 <span>Chat with AI on WhatsApp</span>
               </button>
             </div>

@@ -63,7 +63,7 @@ I'd like to confirm this quote and start my project.`;
 
               {/* 1. Project Type */}
               <div className="space-y-2">
-                <label className="text-xs font-bold font-mono text-slate-700 dark:text-slate-400 uppercase">
+                <label className="text-xs font-bold font-mono text-slate-900 dark:text-slate-400 uppercase">
                   1. Project Category
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -76,10 +76,10 @@ I'd like to confirm this quote and start my project.`;
                     <button
                       key={item.id}
                       onClick={() => setProjectType(item.id)}
-                      className={`p-2.5 rounded-xl text-xs font-medium border transition-all text-center ${
+                      className={`p-2.5 rounded-xl text-xs font-bold border transition-all text-center ${
                         projectType === item.id
-                          ? 'bg-[#0097A7] dark:bg-[#00E5FF] border-transparent text-white dark:text-black font-bold shadow-md'
-                          : 'bg-slate-100/70 dark:bg-[#151B24] border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
+                          ? 'bg-slate-900 dark:bg-[#00E5FF] border-slate-900 dark:border-transparent text-white dark:text-slate-950 shadow-md'
+                          : 'bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
                       }`}
                     >
                       {item.label}
@@ -90,7 +90,7 @@ I'd like to confirm this quote and start my project.`;
 
               {/* 2. Platform */}
               <div className="space-y-2">
-                <label className="text-xs font-bold font-mono text-slate-700 dark:text-slate-400 uppercase">
+                <label className="text-xs font-bold font-mono text-slate-900 dark:text-slate-400 uppercase">
                   2. Platform Scope
                 </label>
                 <div className="grid grid-cols-3 gap-2">
@@ -102,10 +102,10 @@ I'd like to confirm this quote and start my project.`;
                     <button
                       key={item.id}
                       onClick={() => setPlatform(item.id)}
-                      className={`p-2.5 rounded-xl text-xs font-medium border transition-all text-center ${
+                      className={`p-2.5 rounded-xl text-xs font-bold border transition-all text-center ${
                         platform === item.id
-                          ? 'bg-[#0097A7] dark:bg-[#00E5FF] border-transparent text-white dark:text-black font-bold shadow-md'
-                          : 'bg-slate-100/70 dark:bg-[#151B24] border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
+                          ? 'bg-slate-900 dark:bg-[#00E5FF] border-slate-900 dark:border-transparent text-white dark:text-slate-950 shadow-md'
+                          : 'bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
                       }`}
                     >
                       {item.label}
@@ -115,10 +115,10 @@ I'd like to confirm this quote and start my project.`;
               </div>
 
               {/* 3. AI & Advanced Feature Toggle */}
-              <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-100/70 dark:bg-[#151B24] border border-slate-200 dark:border-slate-800">
+              <div className="flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-[#151B24] border-2 border-slate-200 dark:border-slate-800 shadow-xs">
                 <div className="flex items-center gap-2.5">
                   <Zap className="w-4 h-4 text-amber-500" />
-                  <span className="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200">
+                  <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-200">
                     Include Gemini AI / LLM Integration
                   </span>
                 </div>
@@ -126,46 +126,46 @@ I'd like to confirm this quote and start my project.`;
                   type="checkbox"
                   checked={hasAI}
                   onChange={(e) => setHasAI(e.target.checked)}
-                  className="w-4 h-4 rounded text-[#0097A7] focus:ring-[#0097A7] bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
+                  className="w-4 h-4 rounded text-blue-600 focus:ring-blue-500 bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700 cursor-pointer"
                 />
               </div>
             </div>
 
             {/* Right Result Card */}
-            <div className="lg:col-span-5 glass-panel bg-slate-50 dark:bg-[#151B24] p-6 sm:p-8 rounded-2xl border border-slate-200/90 dark:border-[#263241] space-y-6 text-center shadow-lg">
+            <div className="lg:col-span-5 glass-panel bg-white dark:bg-[#151B24] p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-[#263241] space-y-6 text-center shadow-lg">
               <div>
-                <span className="text-xs font-mono uppercase text-[#0097A7] dark:text-[#00E5FF] font-bold tracking-wider">
+                <span className="text-xs font-mono uppercase text-[#00838F] dark:text-[#00E5FF] font-black tracking-wider">
                   ESTIMATED INVESTMENT RANGE
                 </span>
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white font-mono my-2">
                   ${min.toLocaleString()} - ${max.toLocaleString()}
                 </div>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
                   Includes full source code rights, UI/UX design, QA testing & 30-day post launch SLA support.
                 </p>
               </div>
 
-              <div className="space-y-2.5 text-left text-xs text-slate-700 dark:text-slate-300 pt-4 border-t border-slate-200 dark:border-slate-800">
+              <div className="space-y-2.5 text-left text-xs text-slate-800 dark:text-slate-300 pt-4 border-t border-slate-200 dark:border-slate-800 font-medium">
                 <div className="flex items-center justify-between">
                   <span>Estimated Timeframe:</span>
-                  <span className="font-mono text-[#0097A7] dark:text-[#00E5FF] font-bold">3 - 6 Weeks</span>
+                  <span className="font-mono text-[#00838F] dark:text-[#00E5FF] font-bold">3 - 6 Weeks</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>Engineering Pod:</span>
-                  <span className="font-mono text-[#0097A7] dark:text-[#00E5FF] font-bold">3 Senior Engineers + QA</span>
+                  <span className="font-mono text-[#00838F] dark:text-[#00E5FF] font-bold">3 Senior Engineers + QA</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>IP Code Ownership:</span>
-                  <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">100% Guaranteed</span>
+                  <span className="font-mono text-emerald-700 dark:text-emerald-400 font-bold">100% Guaranteed</span>
                 </div>
               </div>
 
               <button
                 onClick={handleSendEstimate}
-                className="w-full relative overflow-hidden group inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#0097A7] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] hover:opacity-95 text-white dark:text-black font-extrabold text-sm shadow-xl shadow-[#25D366]/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl hover:shadow-[#25D366]/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full relative overflow-hidden group inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#00838F] dark:from-[#25D366] dark:via-[#00E5FF] dark:to-[#8B5CF6] text-white dark:text-slate-950 font-black text-sm shadow-xl shadow-emerald-500/25 dark:shadow-[#00E5FF]/25 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/35 to-transparent animate-shimmer-sweep pointer-events-none" />
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-white dark:text-slate-950" />
                 <span>Send Estimate To WhatsApp AI</span>
               </button>
             </div>
